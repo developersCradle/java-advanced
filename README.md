@@ -61,7 +61,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
-- [ ] stuff.
+- [ ] At end of this course ask yourself, "Did you develop the intuition when to use **Java reflection**"!
 
 
 <p align="center">
@@ -97,7 +97,36 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [x] [Section 01](#) - stuff.
+- [ ] [Section 01](#) - Getting Started.
+- [ ] [Section 02](#) - Getting Started Modern Java.  
+- [ ] [Section 03](#) - Local Set Up.  
+- [ ] [Section 04](#) - Source Code and Slides for the course.  
+- [ ] [Section 05](#) - Why Java 8 ?.  
+- [ ] [Section 06](#) - Introduction to Lambda.  
+- [ ] [Section 07](#) - Lambdas and Functional Interfaces.  
+- [ ] [Section 08](#) - Constructor and Method References.  
+- [ ] [Section 09](#) - Lambdas and Local variables (Effectively Final).  
+- [ ] [Section 10](#) - Streams API.  
+- [ ] [Section 11](#) - Stream API - Operations.  
+- [ ] [Section 12](#) - Streams API - Factory Methods.  
+- [ ] [Section 13](#) - Streams API - Numeric Streams.  
+- [ ] [Section 14](#) - Streams API - Terminal Operations.  
+- [ ] [Section 15](#) - Streams API - Parallel Processing.  
+- [ ] [Section 16](#) - Optional.  
+- [ ] [Section 17](#) - Default/Static Methods in Interfaces.  
+- [ ] [Section 18](#) - New Date/Time APIs.  
+- [ ] [Section 19](#) - Base Project Setup for Exploring Java 9 and Beyond Features.  
+- [ ] [Section 20](#) - Local Variable Type Inference (LVTI) using var.  
+- [ ] [Section 21](#) - Text Blocks.  
+- [ ] [Section 22](#) - Enhanced Switch.  
+- [ ] [Section 23](#) - Records.  
+- [ ] [Section 24](#) - Sealed Classes/Interfaces.  
+- [ ] [Section 25](#) - Pattern Matching.  
+- [ ] [Section 26](#) - Checkout/Service Application (Real Time Usecase).  
+- [ ] [Section 27](#) - Simple Web Server.  
+- [ ] [Section 28](#) - New Http Client.  
+- [ ] [Section 29](#) - Java Platform Module System (JPMS).  
+- [ ] [Section 30](#) - What's Next?  
 
 #### Additional stuff.
 
