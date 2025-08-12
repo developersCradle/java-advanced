@@ -61,6 +61,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
+- [ ] Chapters 1 and 7 for now. Related to interfaces!
 - [ ] At end of this course ask yourself, "Did you develop the intuition when to use **Java reflection**"!
 
 
