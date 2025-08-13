@@ -149,30 +149,43 @@ public class CarTest {
 
 <img src="WeWillFigureOut.PNG"  alt="java reflection course" width="500"/>
 
-- Todo check this. 
-
 <img src="EntryPointJavaReflection.PNG"  alt="java reflection course" width="500"/>
 
-1. You can get **much** information out of this `Class<?>` reflection mechanism, such as these. 
-    - How are we getting **Object** of `Class<?>`.
+1. You can get **much** information out of this `Class<?>` reflection mechanism, such as these. We can get following information from **Reflection Entry Point**
+    - What methods and fields it contains.
+    - What classes it extends.
+    - What interfaces it implements.
+    
+- There are three ways to get **Object** of `Class<?>`❗
 
-- There are three ways to get **Object** of `Class<?>`.
-
-- The **first** way to get:
+- The **first** way to get Object instance:
 
 <img src="oneWayToGetObjectOfClass.PNG"  alt="java reflection course" width="500"/>
 
-1. Getting **Class** method of the **Object** instance. Example using `Object.getClass()`.
+1. Getting **Class object** using method of the **Object** instance. Example using `Object.getClass()`.
+    - Reference document [.GetClass](https://docs.oracle.com/javase/tutorial/reflect/class/classNew.html).
 
 <img src="objectGetClass.PNG"  alt="java reflection course" width="500"/>
 
-1.
-2.
-3.
+- We can get their respected **runtime type** of the given `Class<?>`. 
 
-- Todo check this one.
+1. We have **Class object** that represents the **String** type. Example:
+    - Setting the variable: `String stringObject = "some-string";`. 
+    - Getting the reference with the `Class<String> stringClass = stringObject.getClass();`
+2. We have the **Class object** that represents the **Car** class.
+    - Setting the variable: `Car car = new Car();`. 
+    - Getting the reference with the `Class<Car> carClass = car.getClass();`.
+3. We have **Class** object referring the **HashMap** type.
+    - Setting the variable: `Map<String, Integer> map = new HashMap<>();`.
+    - Getting the reference with the `Class<?> mapClass = map.getClass(); // returns HashMap class`
+        - Notice this will point to the **Hash Map** and not the **interface type**❗
 
-- The **second** way to get:
+<img src="getClassForThePrimitiveTypes.PNG"  alt="java reflection course" width="500"/>
+
+1. There is no way to get `.getClass()` for the ❌**primitive type**❌.
+    - Primitive types don't **inherit** from the **Object class**.
+
+- The **second** way to get, to get **class object** is to type `.class` after **type name**:
 
 <img src="secondWayToGetObjectOfClass.PNG"  alt="java reflection course" width="500"/>
 
@@ -180,14 +193,50 @@ public class CarTest {
 
 <img src="dotClass.PNG"  alt="java reflection course" width="500"/>
 
-1. We want to get **Class** information of **particular type**, **without the class instance**.
+1. We want to get **Class object** information of **particular type**, **without the class instance**.
 
-- Todo check this one.
+- Example of getting the **Class information**, without having **instance** of the given type.
+
+````
+Class<String> stringClass = String.class;
+Class<Car> carClass = Car.class;
+Class<?> mapClass = HashMap.class;
+````
+
+<img src="dotClassOfThePrimitiveType.PNG"  alt="java reflection course" width="500"/>
+
+1. We can get information of the **primitive types**, with the following technique. `primitiveTypeHere` and as **prefix** `.class`!
+
+ - todo kysy tästä.
+
+<img src="TheThirdWayToGetClassInformation.PNG"  alt="java reflection course" width="500"/>
+
+
+1. The **third way** to get **Class information** is to call the `Class.froName()`.
+    - We are retrieving **dynamically** the **Class information** from the `classpath`, with **fully qualified class name**!
+
+<img src="staticForName.PNG"  alt="java reflection course" width="500"/>
+
+1. We can access, own **classes** or the **interfaces**.
+2. Even **internal classes**.
+
+<img src="static.forNameNotForThePrimitiveType.PNG"  alt="java reflection course" width="500"/>
+
+1. Still we cannot get the **primitive type**.
+
+<img src="notesClassForName.PNG"  alt="java reflection course" width="500"/>
 
 - [WildCards](https://docs.oracle.com/javase/tutorial/java/generics/wildcards.html).
+
+
 # Reflection API Gateway in Practice.  
 
 IDE Information Plugin - Class Analysis.  
 # Solution - IDE Information Plugin - Class Analysis.  
 Reflection, Interfaces and Basic Recursion.
 Solution - Reflection, Interfaces and Recursion.
+
+
+
+
+

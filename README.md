@@ -48,11 +48,11 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [x] [Section 01](#) - Introduction to Reflection.
-- [ ] [Section 02](#) - Object Creation and Constructors. 
-- [ ] [Section 03](#) - Inspection of Fields & Arrays.
-- [ ] [Section 04](#) - Field Modification & Arrays Creation. 
-- [ ] [Section 05](#) - Methods Discovery & Invocation. 
+- [x] [Section 01](https://github.com/developersCradle/java-advanced/tree/main/Advanced%20Java%20Topics%20Java%20Reflection%20Master%20Class/Section%2001#section-01-introduction-to-reflection) - Introduction to Reflection.
+- [ ] [Section 02](https://github.com/developersCradle/java-advanced/tree/main/Advanced%20Java%20Topics%20Java%20Reflection%20Master%20Class/Section%2002#section-02-object-creation-and-constructors) - Object Creation and Constructors. 
+- [ ] [Section 03](https://github.com/developersCradle/java-advanced/tree/main/Advanced%20Java%20Topics%20Java%20Reflection%20Master%20Class/Section%2003#section-03-inspection-of-fields--arrays) - Inspection of Fields & Arrays.
+- [ ] [Section 04](https://github.com/developersCradle/java-advanced/tree/main/Advanced%20Java%20Topics%20Java%20Reflection%20Master%20Class/Section%2004#section-04-field-modification--arrays-creation) - Field Modification & Arrays Creation. 
+- [ ] [Section 05](https://github.com/developersCradle/java-advanced/tree/main/Advanced%20Java%20Topics%20Java%20Reflection%20Master%20Class/Section%2005#section-05-methods-discovery--invocation) - Methods Discovery & Invocation. 
 - [ ] [Section 06](#) - Java Modifiers Discovery and Analysis. 
 - [ ] [Section 07](#) - Annotations with Java Reflection.
 - [ ] [Section 08](#) - Dynamic Proxies.
@@ -98,8 +98,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Section 01](#) - Getting Started.
-- [ ] [Section 02](#) - Getting Started Modern Java.  
+- [ ] [Section 01](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2001#section-01-getting-started) - Getting Started.
+- [ ] [Section 02](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2002/README.md#section-02-getting-started-modern-java) - Getting Started Modern Java.  
 - [ ] [Section 03](#) - Local Set Up.  
 - [ ] [Section 04](#) - Source Code and Slides for the course.  
 - [ ] [Section 05](#) - Why Java 8 ?.  
