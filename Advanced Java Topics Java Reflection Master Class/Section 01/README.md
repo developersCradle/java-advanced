@@ -183,7 +183,7 @@ public class CarTest {
 <img src="getClassForThePrimitiveTypes.PNG"  alt="java reflection course" width="500"/>
 
 1. There is no way to get `.getClass()` for the ❌**primitive type**❌.
-    - Primitive types don't **inherit** from the **Object class**.
+    - **Primitive types** don't **inherit** from the **Object class**.
 
 - The **second** way to get, to get **class object** is to type `.class` after **type name**:
 
@@ -207,7 +207,23 @@ Class<?> mapClass = HashMap.class;
 
 1. We can get information of the **primitive types**, with the following technique. `primitiveTypeHere` and as **prefix** `.class`!
 
- - todo kysy tästä.
+- Example below:
+
+```
+Class booleanType = boolean.class;
+
+Class intType = int.class;
+
+Class doubleType = double.class;
+
+class MyClass {
+    private int value;
+
+    public boolean isNegative(float x) {
+    // Code come here.
+    }
+}
+```
 
 <img src="TheThirdWayToGetClassInformation.PNG"  alt="java reflection course" width="500"/>
 
@@ -223,10 +239,52 @@ Class<?> mapClass = HashMap.class;
 <img src="static.forNameNotForThePrimitiveType.PNG"  alt="java reflection course" width="500"/>
 
 1. Still we cannot get the **primitive type**.
+    - We will get **RUNTIME ERROR** instead of **COMPILATION ERROR**
 
 <img src="notesClassForName.PNG"  alt="java reflection course" width="500"/>
 
-- [WildCards](https://docs.oracle.com/javase/tutorial/java/generics/wildcards.html).
+1. With the `Class.forName()`, we are more prone for getting the **Exception**, since it's written as parameter.
+2. **There** at least one good use case, it is when using **configuration**.
+
+<img src="classDotForNameInConfiguration.PNG"  alt="java reflection course" width="500"/>
+
+1. We are reading using **reflection** from the **config file**.
+
+
+- This can be **very** useful, when the **Class** is not available in the **Runtime**.
+
+<img src="secondExampleUsingForName.PNG"  alt="java reflection course" width="500"/>
+
+1. Such as **external** libraries, which are injected to the **class path** at **run time**!
+
+<img src="externalInjection.gif"  alt="java reflection course" width="500"/>
+
+> [!TIP]
+> Remember the **SuperClass** is the **parent** class.
+
+<img src="javaWildCards.PNG"  alt="java reflection course" width="500"/>
+
+1. In **Java** the **Integer** extends **Number** and
+**String** implements **CharSequence**.
+2. `List<Number>` is **not** super class of the `List<Integer>`.
+3. `List<CharSequence>` is **not** super class of the `List<String>`.
+
+<img src="javaWildCardsExtends.PNG"  alt="java reflection course" width="500"/>
+
+1. **HOWEVER!**, The `List<?>` is **Java wildcard** and its super type of **any generic type**!
+    - [Wildcards](https://docs.oracle.com/javase/tutorial/java/generics/wildcards.html).
+
+<img src="javaWildCardsExtendsSecond.PNG"  alt="java reflection course" width="500"/>
+
+1. `List<?>` is super class of any `List<T>`, of any **T** type!
+
+<img src="classGenerilization.PNG"  alt="java reflection course" width="500"/>
+
+1. We can follow this logic and make it so, that `Class<?>` is **super class** of any class of the `Class<T>` of any type of **T**!
+
+
+<img src="classGenerilization.PNG"  alt="java reflection course" width="500"/>
+
 
 
 # Reflection API Gateway in Practice.  
