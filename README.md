@@ -98,11 +98,11 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Section 01](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2001#section-01-getting-started) - Getting Started.
-- [ ] [Section 02](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2002/README.md#section-02-getting-started-modern-java) - Getting Started Modern Java.  
+- [x] [Section 01](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2001#section-01-getting-started) - Getting Started. ✅
+- [x] [Section 02](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2002/README.md#section-02-getting-started-modern-java) - Getting Started Modern Java. ✅ 
 - [ ] [Section 03](#) - Local Set Up.  
 - [ ] [Section 04](#) - Source Code and Slides for the course.  
-- [ ] [Section 05](#) - Why Java 8 ?.  
+- [ ] [Section 05](#) - Why Java 8 ?
 - [ ] [Section 06](#) - Introduction to Lambda.  
 - [ ] [Section 07](#) - Lambdas and Functional Interfaces.  
 - [ ] [Section 08](#) - Constructor and Method References.  

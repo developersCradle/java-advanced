@@ -260,7 +260,7 @@ class MyClass {
 <img src="externalInjection.gif"  alt="java reflection course" width="500"/>
 
 > [!TIP]
-> Remember the **SuperClass** is the **parent** class.
+> Remember the **Super Class** is the **parent** class.
 
 <img src="javaWildCards.PNG"  alt="java reflection course" width="500"/>
 
@@ -282,12 +282,30 @@ class MyClass {
 
 1. We can follow this logic and make it so, that `Class<?>` is **super class** of any class of the `Class<T>` of any type of **T**!
 
+<img src="classOfTheQuestionMark.PNG"  alt="java reflection course" width="500"/>
 
-<img src="classGenerilization.PNG"  alt="java reflection course" width="500"/>
+<img src="UsingJavaWildCard.PNG"  alt="java reflection course" width="500"/>
 
+1. This is super **useful**, when we don't know the type, when the **configuration** is provided as string.
+2. Other usage is when we are using the **generic** type.
 
+<img src="javaWildCardsUsage.PNG"  alt="java reflection course" width="500"/>
+
+1. We can **restrict** the types, which we pass to the **class** or **interface**.
+
+<img src="summary2.PNG"  alt="java reflection course" width="500"/>
 
 # Reflection API Gateway in Practice.  
+
+<img src="weWIllStudyThese.PNG"  alt="java reflection course" width="500"/>
+
+
+
+
+
+
+
+
 
 IDE Information Plugin - Class Analysis.  
 # Solution - IDE Information Plugin - Class Analysis.  
