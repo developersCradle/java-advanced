@@ -1,9 +1,8 @@
-# Section 02: Getting Started Modern Java.
+# Section 07: Lambdas and Functional Interfaces. 
 
-Getting Started Modern Java.
+Lambdas and Functional Interfaces.
 
 # What I Learned.
-
 
 # Introduction to Functional Interfaces.
 # Lab : Consumer Functional Interface - Part 1.

@@ -6,7 +6,6 @@ Getting Started
 
 # Course Introduction.
 
-
 - Good teacher!
 
 <img src="courseContent.PNG"  alt="java reflection course" width="500"/>
