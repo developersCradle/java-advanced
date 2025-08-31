@@ -99,10 +99,10 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 #### Progress/Curriculum.
 
 - [x] [Section 01](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2001#section-01-getting-started) - Getting Started. ✅
-- [x] [Section 02](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2002/README.md#section-02-getting-started-modern-java) - Getting Started Modern Java. ✅ 
-- [x] [Section 03](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2003#section-03-local-set-up) - Local Set Up.  ✅ 
-- [x] [Section 04](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2004#section-04-source-code-and-slides-for-the-course) - Source Code and Slides for the course. ✅   
-- [x] [Section 05](#) - Why Java 8 ? ✅ 
+- [x] [Section 02](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2002/README.md#section-02-getting-started-modern-java) - Getting Started Modern Java. ✅
+- [x] [Section 03](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2003#section-03-local-set-up) - Local Set Up. ✅
+- [x] [Section 04](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2004#section-04-source-code-and-slides-for-the-course) - Source Code and Slides for the course. ✅
+- [x] [Section 05](#) - Why Java 8 ? ✅
 - [ ] [Section 06](#) - Introduction to Lambda.  
 - [ ] [Section 07](#) - Lambdas and Functional Interfaces.  
 - [ ] [Section 08](#) - Constructor and Method References.  
@@ -131,6 +131,5 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
-- The repo, which we will be using for installing the **JDK versions** [Modern Java repo](https://github.com/dilipsundarraj1/modern-java).
-    - We can use **SDK man** for managing the different JDK version numbers.
+- This course uses the following repo. [Modern Java repo](https://github.com/dilipsundarraj1/modern-java).
 
