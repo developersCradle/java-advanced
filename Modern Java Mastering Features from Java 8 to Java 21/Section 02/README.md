@@ -6,13 +6,13 @@ Getting Started Modern Java.
 
 # Introduction to Modern Java : Big Picture.
 
-<img src="evolutionOftheModernJava.PNG"  alt="java reflection course" width="500"/>
+<img src="evolutionOftheModernJava.PNG"  alt="java advanced" width="500"/>
 
 1. The module functionality was introduced in **Java 9**. The **one** legacy package was changed to more granary packages.
 
-<img src="weWillCover.PNG"  alt="java reflection course" width="500"/>
+<img src="weWillCover.PNG"  alt="java advanced" width="500"/>
 
-<img src="javaReleaseModel.PNG"  alt="java reflection course" width="500"/>
+<img src="javaReleaseModel.PNG"  alt="java advanced" width="500"/>
 
 1. Java the language is **open source**, but the trademark "Java" is owned by the **Oracle** company.
 2. There are multiple **JDK** providers.

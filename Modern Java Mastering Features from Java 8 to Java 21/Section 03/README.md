@@ -13,13 +13,13 @@ Local Set Up.
 - [Repo where is the SDK man](https://github.com/dilipsundarraj1/modern-java).
 
 <div align="center">
-    <img src="sdkManProvidedJavaVersionsProviders.PNG"  alt="java reflection course" width="500"/>
+    <img src="sdkManProvidedJavaVersionsProviders.PNG"  alt="java advanced" width="500"/>
 </div>
 
  1. You can see that what **SDK** versions and **providers** you could be installed using **SDK Man**.
 
 <div align="center">
-   <img src="sdkManUsage.PNG"  alt="java reflection course" width="500"/>
+   <img src="sdkManUsage.PNG"  alt="java advanced" width="500"/>
 </div>
 
  1. The **full potential** comes from this, we just need to issue one command to change the **SDK**.

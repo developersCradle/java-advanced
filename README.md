@@ -102,9 +102,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Section 02](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2002/README.md#section-02-getting-started-modern-java) - Getting Started Modern Java. ✅
 - [x] [Section 03](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2003#section-03-local-set-up) - Local Set Up. ✅
 - [x] [Section 04](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2004#section-04-source-code-and-slides-for-the-course) - Source Code and Slides for the course. ✅
-- [x] [Section 05](#) - Why Java 8 ? ✅
-- [ ] [Section 06](#) - Introduction to Lambda.  
-- [ ] [Section 07](#) - Lambdas and Functional Interfaces.  
+- [x] [Section 05](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2005#section-05-why-java-8) - Why Java 8? ✅
+- [x] [Section 06](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2006#section-06-introduction-to-lambda) - Introduction to Lambda. ✅
+- [ ] [Section 07](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2007#section-07-lambdas-and-functional-interfaces) - Lambdas and Functional Interfaces.  
 - [ ] [Section 08](#) - Constructor and Method References.  
 - [ ] [Section 09](#) - Lambdas and Local variables (Effectively Final).  
 - [ ] [Section 10](#) - Streams API.  
