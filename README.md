@@ -105,10 +105,10 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Section 05](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2005#section-05-why-java-8) - Why Java 8? ✅
 - [x] [Section 06](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2006#section-06-introduction-to-lambda) - Introduction to Lambda. ✅
 - [ ] [Section 07](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2007#section-07-lambdas-and-functional-interfaces) - Lambdas and Functional Interfaces.  
-- [ ] [Section 08](#) - Constructor and Method References.  
-- [ ] [Section 09](#) - Lambdas and Local variables (Effectively Final).  
-- [ ] [Section 10](#) - Streams API.  
-- [ ] [Section 11](#) - Stream API - Operations.  
+- [ ] [Section 08](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2008/README.md#section-08-constructor-and-method-references) - Constructor and Method References.  
+- [ ] [Section 09](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2009/README.md#section-09-lambdas-and-local-variables-effectively-final) - Lambdas and Local variables (Effectively Final).  
+- [ ] [Section 10](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2010/README.md#section-10-streams-api) - Streams API.  
+- [ ] [Section 11](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2011#section-11-stream-api---operations) - Stream API - Operations.  
 - [ ] [Section 12](#) - Streams API - Factory Methods.  
 - [ ] [Section 13](#) - Streams API - Numeric Streams.  
 - [ ] [Section 14](#) - Streams API - Terminal Operations.  
