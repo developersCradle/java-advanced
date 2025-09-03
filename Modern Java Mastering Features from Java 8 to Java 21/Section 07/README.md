@@ -146,6 +146,123 @@ public class ConsumerExample {
 
 - Example code is from. [Consumer Functional Interface](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/ConsumerExample.java).
 
+- We will have the following classes `student` and `studentDatabase`.
+
+````
+package com.learnJava.data;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Student {
+    private String name;
+    private int gradeLevel;
+    private double gpa;
+    private String gender;
+
+
+    public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities) {
+        this.name = name;
+        this.gradeLevel = gradeLevel;
+        this.gpa = gpa;
+        this.gender = gender;
+        this.activities = activities;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getGradeLevel() {
+        return gradeLevel;
+    }
+
+    public void setGradeLevel(int gradeLevel) {
+        this.gradeLevel = gradeLevel;
+    }
+
+    public double getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(double gpa) {
+        this.gpa = gpa;
+    }
+
+    List<String> activities = new ArrayList<>();
+
+    public List<String> getActivities() {
+        return activities;
+    }
+
+    public void setActivities(List<String> activities) {
+        this.activities = activities;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", gradeLevel=" + gradeLevel +
+                ", gpa=" + gpa +
+                ", gender='" + gender + '\'' +
+                ", activities=" + activities +
+                '}';
+    }
+
+
+}
+````
+
+- And the `studentDataase`.
+
+````
+package com.learnJava.data;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class StudentDataBase {
+
+    /**
+     * Total of 6 students in the database.
+     * @return
+     */
+    public static List<Student> getAllStudents(){
+
+        /**
+         * 2nd grade students
+         */
+        Student student1 = new Student("Adam",2,3.6, "male",Arrays.asList("swimming", "basketball","volleyball"));
+        Student student2 = new Student("Jenny",2,3.8,"female", Arrays.asList("swimming", "gymnastics","soccer"));
+        /**
+         * 3rd grade students
+         */
+        Student student3 = new Student("Emily",3,4.0,"female", Arrays.asList("swimming", "gymnastics","aerobics"));
+        Student student4 = new Student("Dave",3,3.9,"male", Arrays.asList("swimming", "gymnastics","soccer"));
+        /**
+         * 4th grade students
+         */
+        Student student5 = new Student("Sophia",4,3.5,"female", Arrays.asList("swimming", "dancing","football"));
+        Student student6 = new Student("James",4,3.9,"male", Arrays.asList("swimming", "basketball","baseball","football"));
+
+        List<Student> students = Arrays.asList(student1,student2,student3,student4,student5,student6);
+        return students;
+    }
+}
+````
 
 - We can see the `.forEach` method using he `Consumer` **Functional Interface**.
 
@@ -190,6 +307,69 @@ public class ConsumerExample {
 }
 ````
 
+
+- We can use two **Consumers** in a chain.
+
+````
+public static void printNamesActivities()
+    {
+        Consumer<Student> c3 = (student) -> System.out.println(student.getName());
+        Consumer<Student> c4 = (student) -> System.out.println(student.getActivities());
+
+        List<Student> studentList = StudentDataBase.getAllStudents();
+
+        studentList.forEach(c3.andThen(c4)); // This is called consumer chaining.
+    }
+````
+
+- This is called **consumer chaining** `studentList.forEach(c3.andThen(c4)); // This is called Consumer Chaining.`.
+
+- We could do this as below, but this would need to loop **two** times.
+
+````
+    public static void printNamesActivities()
+    {
+        Consumer<Student> c3 = (student) -> System.out.println(student.getName());
+        Consumer<Student> c4 = (student) -> System.out.println(student.getActivities());
+
+        List<Student> studentList = StudentDataBase.getAllStudents();
+
+        studentList.forEach(c3);
+        studentList.forEach(c4);
+    }
+````
+
+- We can achieve code re-usability with **Lambda Expression**, as following are defined:
+    - `static Consumer<Student> c2 = (string) -> System.out.println(string);`
+    - `static Consumer<Student> c3 = (student) -> System.out.println(student.getName());`
+    - `static Consumer<Student> c4 = (student) -> System.out.println(student.getActivities());`
+
+
+````
+public static void printNamesActivitiesWithTheCondition()
+    {
+
+        System.out.println("printNamesActivitiesWithTheCondition:");
+        List<Student> studentList = StudentDataBase.getAllStudents();
+
+        studentList.forEach((student -> {
+            if (student.getGradeLevel() >= 3){
+                c3.andThen(c4).accept(student);
+            }
+        }));
+    }
+````
+
+<div align="center">
+    <img src="consumerChaining.PNG"  alt="java advanced" width="500"/>
+</div>
+
+1. You can see, the following order `c3` and then `c4`. This **WONT** be **returned/executed** until the `1.` `.accept(student)` for given **student**!
+    
+
+> [!TIP]
+> We can chain **n** number of times the using the `.andThen()` as example: <br> `c3.andThen(c4).andThen(c1).accept(student);`.
+    
 
 # Lab : BiConsumer Functional Interface.
 
