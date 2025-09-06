@@ -111,9 +111,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 11](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2011#section-11-stream-api---operations) - Stream API - Operations.  
 - [ ] [Section 12](#) - Streams API - Factory Methods.  
 - [ ] [Section 13](#) - Streams API - Numeric Streams.  
-- [ ] [Section 14](#) - Streams API - Terminal Operations.  
+- [ ] [Section 14](#) - Streams API - Terminal Operations.
 - [ ] [Section 15](#) - Streams API - Parallel Processing.  
-- [ ] [Section 16](#) - Optional.  
+- [ ] [Section 16](#) - Optional.
 - [ ] [Section 17](#) - Default/Static Methods in Interfaces.  
 - [ ] [Section 18](#) - New Date/Time APIs.  
 - [ ] [Section 19](#) - Base Project Setup for Exploring Java 9 and Beyond Features.  

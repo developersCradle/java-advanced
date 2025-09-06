@@ -371,12 +371,8 @@ public static void printNamesActivitiesWithTheCondition()
 - You can see, the following order `c3` and then `c4`. This **WONT** be **returned/executed** until the `1.` `.accept(student)` is executed for given **student**!
 
 
-<div align="center">
-
 > [!TIP]
 > We can chain **n** number of times the using the `.andThen()` as example: <br> `c3.andThen(c4).andThen(c1).accept(student);`.
-
-</div>
 
 
 # Lab : BiConsumer Functional Interface.
@@ -520,7 +516,7 @@ public interface BiConsumer<T, U> {
 
 - **Predicate** are used to **test** something. These will return **boolean** as result. 
 
-- We will be exploring the **predicate** from the Java **SDK** as following:
+- We will be exploring the **Predicate** from the Java **SDK** as following:
 
 ````
 /*
@@ -777,8 +773,65 @@ public static void predicateAnd(){
     }
 ````
 
-
 # Lab : Predicate - Functional Interface - Part 2.
+
+- Example code is from. [Predicate Functional Interface](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/PredicateStudentExample.java).
+
+- The **Predicate** usage with the `student` example. We will **filter** based one the criteria. 
+
+````
+package com.learnJava.functionalInterfaces;
+
+
+import com.learnJava.data.Student;
+import com.learnJava.data.StudentDataBase;
+
+import java.util.List;
+import java.util.function.Predicate;
+
+public class PredicateStudentExample {
+    // First criteria for the GradeLevel.
+    static Predicate<Student> p1 = (s) -> s.getGradeLevel() >= 3;
+    // Second criteria for the GBA.
+    static Predicate<Student> p2 = (s) -> s.getGpa() >= 3.9;
+
+    public static  void filterStudentByGradeLevel()
+    {
+        List<Student> studentList = StudentDataBase.getAllStudents();
+        studentList.forEach(student -> {
+            if (p1.test(student))
+            {
+                System.out.println("Student matches the Grade Level criteria:" + student);
+            }
+        });
+    }
+    public static  void filterStudentByGpa()
+    {
+        List<Student> studentList = StudentDataBase.getAllStudents();
+        studentList.forEach(student -> {
+            if (p2.test(student))
+            {
+                System.out.println("Student matches the GPA criteria:" + student);
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        filterStudentByGradeLevel();
+
+        filterStudentByGpa();
+    }
+
+}
+````
+
+<div align="center">
+    <img src="predicateFilteringExample.jpg"  alt="java advanced" width="800px" height="500px"/>
+</div>
+
+1. There is filter **Predicate** `p1` for filtering based one the **GPA**.
+2. There is filter **Predicate** `p1` for filtering based one the **Grade Level**.
+
 
 # Lab : Combining Predicate + Consumer.
 
