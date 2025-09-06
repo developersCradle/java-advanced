@@ -40,9 +40,13 @@ Lambdas and Functional Interfaces.
 
 # Lab : Consumer Functional Interface - Part 1.
 
+<div align="center">
+    <img src="consumerMethods.jpg"  alt="java advanced" width="500"/>
+</div>
+
 - Example code is from. [Consumer Functional Interface](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/ConsumerExample.java).
 
-- The `Consumer` interface in **Java**.
+- The `Consumer` interface from **Java**.
 
 ````
 /*
@@ -364,8 +368,7 @@ public static void printNamesActivitiesWithTheCondition()
     <img src="consumerChaining.PNG"  alt="java advanced" width="500"/>
 </div>
 
-1. You can see, the following order `c3` and then `c4`. This **WONT** be **returned/executed** until the `1.` `.accept(student)` for given **student**!
-    
+- You can see, the following order `c3` and then `c4`. This **WONT** be **returned/executed** until the `1.` `.accept(student)` is executed for given **student**!
 
 > [!TIP]
 > We can chain **n** number of times the using the `.andThen()` as example: <br> `c3.andThen(c4).andThen(c1).accept(student);`.
@@ -373,7 +376,389 @@ public static void printNamesActivitiesWithTheCondition()
 
 # Lab : BiConsumer Functional Interface.
 
+- Example code is from. [BiConsumer Functional Interface](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/BiConsumerExample.java).
+
+- **BiConsumer** is extension to **Consumer**.
+
+- The **BiConsumer** interface in **Java**.
+
+````
+/*
+ * Copyright (c) 2012, 2013, Oracle and/or its affiliates. All rights reserved.
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ *
+ * This code is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 2 only, as
+ * published by the Free Software Foundation.  Oracle designates this
+ * particular file as subject to the "Classpath" exception as provided
+ * by Oracle in the LICENSE file that accompanied this code.
+ *
+ * This code is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+ * version 2 for more details (a copy is included in the LICENSE file that
+ * accompanied this code).
+ *
+ * You should have received a copy of the GNU General Public License version
+ * 2 along with this work; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ * Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA
+ * or visit www.oracle.com if you need additional information or have any
+ * questions.
+ */
+package java.util.function;
+
+import java.util.Objects;
+
+/**
+ * Represents an operation that accepts two input arguments and returns no
+ * result.  This is the two-arity specialization of {@link Consumer}.
+ * Unlike most other functional interfaces, {@code BiConsumer} is expected
+ * to operate via side-effects.
+ *
+ * <p>This is a <a href="package-summary.html">functional interface</a>
+ * whose functional method is {@link #accept(Object, Object)}.
+ *
+ * @param <T> the type of the first argument to the operation
+ * @param <U> the type of the second argument to the operation
+ *
+ * @see Consumer
+ * @since 1.8
+ */
+@FunctionalInterface
+public interface BiConsumer<T, U> {
+
+    /**
+     * Performs this operation on the given arguments.
+     *
+     * @param t the first input argument
+     * @param u the second input argument
+     */
+    void accept(T t, U u);
+
+    /**
+     * Returns a composed {@code BiConsumer} that performs, in sequence, this
+     * operation followed by the {@code after} operation. If performing either
+     * operation throws an exception, it is relayed to the caller of the
+     * composed operation.  If performing this operation throws an exception,
+     * the {@code after} operation will not be performed.
+     *
+     * @param after the operation to perform after this operation
+     * @return a composed {@code BiConsumer} that performs in sequence this
+     * operation followed by the {@code after} operation
+     * @throws NullPointerException if {@code after} is null
+     */
+    default BiConsumer<T, U> andThen(BiConsumer<? super T, ? super U> after) {
+        Objects.requireNonNull(after);
+
+        return (l, r) -> {
+            accept(l, r);
+            after.accept(l, r);
+        };
+    }
+}
+````
+
+- As you can see the **BI** accepts two `void accept(T t, U u);`.
+    - Accepts **two** inputs.
+
+- Example of the `biConsumer` simple case. 
+
+````
+        BiConsumer<String, String> biConsumer = (a,b) -> {
+            System.out.println(" a : "  +  a + " b : " + b );
+        };
+        biConsumer.accept("java7" , "java8");
+````
+
+- Example using multiple `biConsumers` after each other.
+
+````
+        BiConsumer<Integer, Integer> multiply = (a,b) -> {
+            System.out.println("Multiplication : " + (a * b));
+        };
+
+
+        BiConsumer<Integer, Integer> addition = (a,b) -> {
+            System.out.println("Addition : " + (a + b));
+        };
+
+        BiConsumer<Integer, Integer> division = (a,b) -> {
+            System.out.println("Division : "  + (a / b));
+        };
+
+
+        multiply.andThen(addition).andThen(division).accept(10,5);
+````
+
+- The **BiConsumer** usage with the `student` example. 
+
+````
+    public static void nameAndActivities(){
+
+        BiConsumer<String, List<String>> studentBiConsumer = (name, activities) -> System.out.println(name + " : " + activities);
+
+        Consumer<String> stringConsumer = (name) -> System.out.println("name is  :" + name);
+
+        List<Student> students = StudentDataBase.getAllStudents();
+
+        students.forEach((s) -> studentBiConsumer.accept(s.getName(),s.getActivities()));
+    }
+````
+
 # Lab : Predicate - Functional Interface - Part 1.
+
+<div align="center">
+    <img src="predicateMethods.jpg"  alt="java advanced" width="600"/>
+</div>
+
+- **Predicate** are used to **test** something. These will return **boolean** as result. 
+
+- We will be exploring the **predicate** from the Java **SDK** as following:
+
+````
+/*
+ * Copyright (c) 2010, 2013, Oracle and/or its affiliates. All rights reserved.
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ *
+ * This code is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 2 only, as
+ * published by the Free Software Foundation.  Oracle designates this
+ * particular file as subject to the "Classpath" exception as provided
+ * by Oracle in the LICENSE file that accompanied this code.
+ *
+ * This code is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+ * version 2 for more details (a copy is included in the LICENSE file that
+ * accompanied this code).
+ *
+ * You should have received a copy of the GNU General Public License version
+ * 2 along with this work; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ * Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA
+ * or visit www.oracle.com if you need additional information or have any
+ * questions.
+ */
+package java.util.function;
+
+import java.util.Objects;
+
+/**
+ * Represents a predicate (boolean-valued function) of one argument.
+ *
+ * <p>This is a <a href="package-summary.html">functional interface</a>
+ * whose functional method is {@link #test(Object)}.
+ *
+ * @param <T> the type of the input to the predicate
+ *
+ * @since 1.8
+ */
+@FunctionalInterface
+public interface Predicate<T> {
+
+    /**
+     * Evaluates this predicate on the given argument.
+     *
+     * @param t the input argument
+     * @return {@code true} if the input argument matches the predicate,
+     * otherwise {@code false}
+     */
+    boolean test(T t);
+
+    /**
+     * Returns a composed predicate that represents a short-circuiting logical
+     * AND of this predicate and another.  When evaluating the composed
+     * predicate, if this predicate is {@code false}, then the {@code other}
+     * predicate is not evaluated.
+     *
+     * <p>Any exceptions thrown during evaluation of either predicate are relayed
+     * to the caller; if evaluation of this predicate throws an exception, the
+     * {@code other} predicate will not be evaluated.
+     *
+     * @param other a predicate that will be logically-ANDed with this
+     *              predicate
+     * @return a composed predicate that represents the short-circuiting logical
+     * AND of this predicate and the {@code other} predicate
+     * @throws NullPointerException if other is null
+     */
+    default Predicate<T> and(Predicate<? super T> other) {
+        Objects.requireNonNull(other);
+        return (t) -> test(t) && other.test(t);
+    }
+
+    /**
+     * Returns a predicate that represents the logical negation of this
+     * predicate.
+     *
+     * @return a predicate that represents the logical negation of this
+     * predicate
+     */
+    default Predicate<T> negate() {
+        return (t) -> !test(t);
+    }
+
+    /**
+     * Returns a composed predicate that represents a short-circuiting logical
+     * OR of this predicate and another.  When evaluating the composed
+     * predicate, if this predicate is {@code true}, then the {@code other}
+     * predicate is not evaluated.
+     *
+     * <p>Any exceptions thrown during evaluation of either predicate are relayed
+     * to the caller; if evaluation of this predicate throws an exception, the
+     * {@code other} predicate will not be evaluated.
+     *
+     * @param other a predicate that will be logically-ORed with this
+     *              predicate
+     * @return a composed predicate that represents the short-circuiting logical
+     * OR of this predicate and the {@code other} predicate
+     * @throws NullPointerException if other is null
+     */
+    default Predicate<T> or(Predicate<? super T> other) {
+        Objects.requireNonNull(other);
+        return (t) -> test(t) || other.test(t);
+    }
+
+    /**
+     * Returns a predicate that tests if two arguments are equal according
+     * to {@link Objects#equals(Object, Object)}.
+     *
+     * @param <T> the type of arguments to the predicate
+     * @param targetRef the object reference with which to compare for equality,
+     *               which may be {@code null}
+     * @return a predicate that tests if two arguments are equal according
+     * to {@link Objects#equals(Object, Object)}
+     */
+    static <T> Predicate<T> isEqual(Object targetRef) {
+        return (null == targetRef)
+                ? Objects::isNull
+                : object -> targetRef.equals(object);
+    }
+
+    /**
+     * Returns a predicate that is the negation of the supplied predicate.
+     * This is accomplished by returning result of the calling
+     * {@code target.negate()}.
+     *
+     * @param <T>     the type of arguments to the specified predicate
+     * @param target  predicate to negate
+     *
+     * @return a predicate that negates the results of the supplied
+     *         predicate
+     *
+     * @throws NullPointerException if target is null
+     *
+     * @since 11
+     */
+    @SuppressWarnings("unchecked")
+    static <T> Predicate<T> not(Predicate<? super T> target) {
+        Objects.requireNonNull(target);
+        return (Predicate<T>)target.negate();
+    }
+}
+````
+
+- We can see different, **methods** from the **Predicate** class.
+    - The main one is the `boolean test(T t);`, to test the given input.
+
+``` 
+    default Predicate<T> and(Predicate<? super T> other) {
+        Objects.requireNonNull(other);
+        return (t) -> test(t) && other.test(t);
+    }
+
+```
+
+- We will use the `default Predicate<T> and(Predicate<? super T> other)` to chain the **Predicates**, example of this one:
+    - We have the following **Predicates**.
+        - `Predicate<Integer> isPositive = x -> x > 0;`.
+        - `Predicate<Integer> isEven = x -> x % 2 == 0;`.
+            - We will chain them.
+                - `Predicate<Integer> positiveAndEven = isPositive.and(isEven);`.
+
+```
+    default Predicate<T> negate() {
+        return (t) -> !test(t);
+    }
+```
+
+- We will use the `default Predicate<T> negate()` to **negate** the flip the **result of a predicate**.
+
+````
+    default Predicate<T> or(Predicate<? super T> other) {
+        Objects.requireNonNull(other);
+        return (t) -> test(t) || other.test(t);
+    }
+````
+
+- Todo this.
+
+````
+
+    static <T> Predicate<T> isEqual(Object targetRef) {
+        return (null == targetRef)
+                ? Objects::isNull
+                : object -> targetRef.equals(object);
+    }
+````
+
+- Todo this.
+
+````
+    static <T> Predicate<T> not(Predicate<? super T> target) {
+        Objects.requireNonNull(target);
+        return (Predicate<T>)target.negate();
+    }
+````
+
+- We will be exploring these concepts using **examples**.
+
+- The **Predicate** tests the **even number**.
+
+````
+static Predicate<Integer> p = (i) -> {return  i%2 ==0;};
+
+System.out.println("Result is p : " + p.test(2));
+````
+
+- This will be returning **boolean**, in this case **true**. Also, we can use this, without the `{}` as following:
+
+````
+static Predicate<Integer> p1 = (i) -> i%2 ==0;
+
+System.out.println("Result is p1 : " + p1.test(3));
+````
+
+- We will explore `.and` methods of the **Predicate**. This is called **predicate chaining**.
+
+````
+static Predicate<Integer> p1 = (i) -> i%2 ==0;
+
+static Predicate<Integer> p2 = (i) -> i%5 ==0;
+
+public static void predicateAnd(){
+    System.out.println("Result in predicateAnd, this example we will use the 10: " + p1.and (p2).test(10));
+    System.out.println("You can see that, the 10 is divisible by 2 and is divisible by 5.");
+    System.out.println("Result in predicateAnd, this example we will use the 12: " + p1.and (p2).test(12));
+    System.out.println("You can see that, the 12 is divisible by 2, but not the 5.");
+}
+
+````
+
+- We will explore `.or` methods of the **Predicate**. This is called **predicate chaining**.
+    - **Predicate** return **true**, either if `p1` or `p2` return **true**.
+
+````
+public static void predicateOr(){
+
+        System.out.println("Result in predicateOr : " + p1.and(p2).test(4));
+    }
+````
+
+
+
 
 # Lab : Predicate - Functional Interface - Part 2.
 
@@ -383,6 +768,11 @@ public static void printNamesActivitiesWithTheCondition()
 
 # Lab : Function - Function Interface - Part 1.
 
+<div align="center">
+    <img src="functionMethods.jpg"  alt="java advanced" width="600"/>
+</div>
+
+
 # Lab : Function - Function Interface - Part 2.
 
 # Lab : BiFunction Functional Interface.
@@ -390,3 +780,7 @@ public static void printNamesActivitiesWithTheCondition()
 # Lab : UnaryOperator and BinaryOperator Functional Interface.
 
 # Lab : Supplier - Functional Interface.
+
+<div align="center">
+    <img src="supplierMethods.jpg"  alt="java advanced" width="600"/>
+</div

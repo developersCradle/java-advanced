@@ -50,7 +50,7 @@ public class ConsumerExample {
 
         studentList.forEach((student -> {
             if (student.getGradeLevel() >= 3 ){
-                c3.andThen(c4).andThen(c1).accept(student);
+                c3.andThen(c4).accept(student);
             }
         }));
     }
