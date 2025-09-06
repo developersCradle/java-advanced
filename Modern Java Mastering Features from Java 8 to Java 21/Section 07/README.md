@@ -735,7 +735,6 @@ System.out.println("Result is p1 : " + p1.test(3));
 
 ````
 static Predicate<Integer> p1 = (i) -> i%2 ==0;
-
 static Predicate<Integer> p2 = (i) -> i%5 ==0;
 
 public static void predicateAnd(){
@@ -748,15 +747,27 @@ public static void predicateAnd(){
 ````
 
 - We will explore `.or` methods of the **Predicate**. This is called **predicate chaining**.
-    - **Predicate** return **true**, either if `p1` or `p2` return **true**.
+    - This **Predicate** chain return **true**, either if `p1` or `p2` return **true**.
 
 ````
-public static void predicateOr(){
+    public static void predicateOr(){
 
-        System.out.println("Result in predicateOr : " + p1.and(p2).test(4));
+        static Predicate<Integer> p1 = (i) -> i%2 ==0;
+        static Predicate<Integer> p2 = (i) -> i%5 ==0;
+
+        System.out.println("Predicate OR result is : " + p1.or(p2).test(10));
+        System.out.println("Predicate OR result is : " + p1.or(p2).test(9));
     }
 ````
 
+- We will explore `.negate` method of the **Predicate**. This is called **predicate chaining**.
+    - This `.negate` will change the output of the result.
+
+````
+    public static void predicateNegate(){
+        System.out.println("Result in predicateNegate : " + p1.and(p2).negate().test(10)); //equivalent to reversing the result
+    }
+````
 
 
 

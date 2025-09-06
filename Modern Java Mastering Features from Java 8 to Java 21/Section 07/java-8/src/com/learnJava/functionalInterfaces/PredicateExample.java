@@ -26,8 +26,7 @@ public class PredicateExample {
     }
 
     public static void predicateNegate(){
-
-        System.out.println("Result in predicateNegate : " + p1.and(p2).negate().test(4)); //equivalent to reversing the result
+        System.out.println("Result in predicateNegate : " + p1.and(p2).negate().test(10)); //equivalent to reversing the result
     }
 
 
@@ -39,9 +38,9 @@ public class PredicateExample {
 
 //        predicateAnd();
 
-        predicateOr();
+//        predicateOr();
 
-//        predicateNegate();
+        predicateNegate();
 
     }
 
