@@ -370,9 +370,14 @@ public static void printNamesActivitiesWithTheCondition()
 
 - You can see, the following order `c3` and then `c4`. This **WONT** be **returned/executed** until the `1.` `.accept(student)` is executed for given **student**!
 
+
+<div align="center">
+
 > [!TIP]
 > We can chain **n** number of times the using the `.andThen()` as example: <br> `c3.andThen(c4).andThen(c1).accept(student);`.
-    
+
+</div>
+
 
 # Lab : BiConsumer Functional Interface.
 
@@ -765,10 +770,12 @@ public static void predicateAnd(){
 
 ````
     public static void predicateNegate(){
+        static Predicate<Integer> p1 = (i) -> i%2 ==0;
+        static Predicate<Integer> p2 = (i) -> i%5 ==0;
+
         System.out.println("Result in predicateNegate : " + p1.and(p2).negate().test(10)); //equivalent to reversing the result
     }
 ````
-
 
 
 # Lab : Predicate - Functional Interface - Part 2.
