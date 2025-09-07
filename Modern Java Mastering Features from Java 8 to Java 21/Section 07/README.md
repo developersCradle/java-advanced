@@ -32,7 +32,7 @@ Lambdas and Functional Interfaces.
     <img src="newFunctionalInterfacesInTheJava8InterfaceExtensions.PNG"  alt="java advanced" width="500"/>
 </div>
 
-1. **Consumer** has the interface **BiConsumer**
+1. **Consumer** has the interface **BiConsumer**.
 
 2. **Predicate** has the **BiPredicate**.
 
@@ -43,6 +43,8 @@ Lambdas and Functional Interfaces.
 <div align="center">
     <img src="consumerMethods.jpg"  alt="java advanced" width="500"/>
 </div>
+
+- **Consumer** consumes something, but does **not** return **result**.
 
 - Example code is from. [Consumer Functional Interface](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/ConsumerExample.java).
 
@@ -377,11 +379,16 @@ public static void printNamesActivitiesWithTheCondition()
 
 # Lab : BiConsumer Functional Interface.
 
+<div align="center">
+    <img src="biConsumer.jpg"  alt="java advanced" width="500"/>
+</div>
+
+- **BiConsumer** is the same as **Consumer**, but for **two** input and **no output**.
+    - **BiConsumer** is extension to **Consumer**.
+
 - Example code is from. [BiConsumer Functional Interface](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/BiConsumerExample.java).
 
-- **BiConsumer** is extension to **Consumer**.
-
-- The **BiConsumer** interface in **Java**.
+- We will be exploring the **BiConsumer** from the Java **SDK** as following:
 
 ````
 /*
@@ -826,16 +833,56 @@ public class PredicateStudentExample {
 ````
 
 <div align="center">
-    <img src="predicateFilteringExample.jpg"  alt="java advanced" width="800px" height="500px"/>
+    <img src="predicateFilteringExample.jpg"  alt="java advanced" width="900px"/>
 </div>
 
 1. There is filter **Predicate** `p1` for filtering based one the **GPA**.
 2. There is filter **Predicate** `p1` for filtering based one the **Grade Level**.
 
+- We can now **easily** chain these conditions.
+    - Example `p1.or(p2).negate().test(student)`, as following:
+
+````
+    public static void filterStudents()
+    {
+        System.out.println("filterStudents");
+        List<Student> studentList = StudentDataBase.getAllStudents();
+        studentList.forEach(student -> {
+
+            // If its fits the p1 and the p2 Predicate.
+            if (p1.or(p2).negate().test(student))
+            {
+                System.out.println(student);
+            }
+        });
+    }
+
+````
 
 # Lab : Combining Predicate + Consumer.
 
+<div align="center">
+    <img src=" "  alt="Predicate Consumer" width="500"/>
+</div>
+
+- Example code is from. [Predicate and Consumer combo](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/PredicateAndConsumerExample.java).
+
+
+- jäin 4:00
+
+
+
 # Lab : BiPredicate.
+
+<div align="center">
+    <img src="BiPredicate.jpg"  alt="java advanced" width="500"/>
+</div>
+
+- Example code is from. [BiPredicate](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/PredicateAndConsumerExample.java).
+
+
+- **BiPredicate** are used to **test** something. These will return **boolean** as result. 
+    - This time it's done with **two inputs** and **one output**!
 
 # Lab : Function - Function Interface - Part 1.
 
@@ -843,12 +890,33 @@ public class PredicateStudentExample {
     <img src="functionMethods.jpg"  alt="java advanced" width="600"/>
 </div>
 
+- **Function** represents function by **taking** one input `(T)` and **returning** one output `(R)`.
 
 # Lab : Function - Function Interface - Part 2.
 
 # Lab : BiFunction Functional Interface.
 
+<div align="center">
+    <img src="BiFunction.jpg"  alt="java advanced" width="600"/>
+</div>
+
+- **BiFunction** represents function by **taking two input** `(T, U)` and **returning** one output `(R)`.
+
 # Lab : UnaryOperator and BinaryOperator Functional Interface.
+
+<div align="center">
+    <img src="unaryOperator.jpg"  alt="java advanced" width="600"/>
+</div>
+
+
+- todo here.
+
+<div align="center">
+    <img src="binaryOperator.jpg"  alt="java advanced" width="600"/>
+</div>
+
+
+- Todo here.
 
 # Lab : Supplier - Functional Interface.
 

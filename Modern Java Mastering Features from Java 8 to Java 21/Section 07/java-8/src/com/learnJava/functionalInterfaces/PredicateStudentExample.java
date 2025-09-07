@@ -15,6 +15,7 @@ public class PredicateStudentExample {
 
     public static  void filterStudentByGradeLevel()
     {
+        System.out.println("filterStudentByGradeLevel :");
         List<Student> studentList = StudentDataBase.getAllStudents();
         studentList.forEach(student -> {
             if (p1.test(student))
@@ -25,6 +26,7 @@ public class PredicateStudentExample {
     }
     public static  void filterStudentByGpa()
     {
+        System.out.println("filterStudentByGpa :");
         List<Student> studentList = StudentDataBase.getAllStudents();
         studentList.forEach(student -> {
             if (p2.test(student))
@@ -34,10 +36,27 @@ public class PredicateStudentExample {
         });
     }
 
-    public static void main(String[] args) {
-        filterStudentByGradeLevel();
 
-        filterStudentByGpa();
+    public static void filterStudents()
+    {
+        System.out.println("filterStudents");
+        List<Student> studentList = StudentDataBase.getAllStudents();
+        studentList.forEach(student -> {
+
+            // If its fits the p1 and the p2 Predicate.
+            if (p1.or(p2).negate().test(student))
+            {
+                System.out.println(student);
+            }
+        });
+    }
+
+
+    public static void main(String[] args) {
+//        filterStudentByGradeLevel();
+//        filterStudentByGpa();
+
+        filterStudents();
     }
 
 }
