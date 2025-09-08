@@ -38,13 +38,14 @@ Lambdas and Functional Interfaces.
 
 3. **Function** has the **BiFunction**, **UnaryOperator** and **BinaryOperator**.
 
-# Lab : Consumer Functional Interface - Part 1.
+# Lab:Consumer Functional Interface - Part 1.
 
 <div align="center">
     <img src="consumerMethods.jpg"  alt="java advanced" width="500"/>
 </div>
 
 - **Consumer** consumes something, but does **not** return **result**.
+    - These are used to do some work or job.
 
 - Example code is from. [Consumer Functional Interface](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/ConsumerExample.java).
 
@@ -148,7 +149,7 @@ public class ConsumerExample {
 }
 ````
 
-# Lab : Consumer Functional Interface - Part 2.
+# Lab:Consumer Functional Interface - Part 2.
 
 - Example code is from. [Consumer Functional Interface](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/ConsumerExample.java).
 
@@ -313,7 +314,6 @@ public class ConsumerExample {
 }
 ````
 
-
 - We can use two **Consumers** in a chain.
 
 ````
@@ -377,7 +377,7 @@ public static void printNamesActivitiesWithTheCondition()
 > We can chain **n** number of times the using the `.andThen()` as example: <br> `c3.andThen(c4).andThen(c1).accept(student);`.
 
 
-# Lab : BiConsumer Functional Interface.
+# Lab:BiConsumer Functional Interface.
 
 <div align="center">
     <img src="biConsumer.jpg"  alt="java advanced" width="500"/>
@@ -385,6 +385,8 @@ public static void printNamesActivitiesWithTheCondition()
 
 - **BiConsumer** is the same as **Consumer**, but for **two** input and **no output**.
     - **BiConsumer** is extension to **Consumer**.
+        - Like **Consumer**. These are used to do some work or job.
+
 
 - Example code is from. [BiConsumer Functional Interface](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/BiConsumerExample.java).
 
@@ -515,7 +517,7 @@ public interface BiConsumer<T, U> {
     }
 ````
 
-# Lab : Predicate - Functional Interface - Part 1.
+# Lab:Predicate - Functional Interface - Part 1.
 
 <div align="center">
     <img src="predicateMethods.jpg"  alt="java advanced" width="600"/>
@@ -780,7 +782,7 @@ public static void predicateAnd(){
     }
 ````
 
-# Lab : Predicate - Functional Interface - Part 2.
+# Lab:Predicate - Functional Interface - Part 2.
 
 - Example code is from. [Predicate Functional Interface](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/PredicateStudentExample.java).
 
@@ -859,20 +861,59 @@ public class PredicateStudentExample {
 
 ````
 
-# Lab : Combining Predicate + Consumer.
+# Lab:Combining Predicate + Consumer.
 
 <div align="center">
-    <img src=" "  alt="Predicate Consumer" width="500"/>
+    <img src="CombiningPredicateConsumer.jpg"  alt="Predicate Consumer" width="500"/>
 </div>
+
+- We will just **combine** what we learned previously, in one example.
 
 - Example code is from. [Predicate and Consumer combo](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/PredicateAndConsumerExample.java).
 
 
-- jäin 4:00
+````
+package com.learnJava.functionalInterfaces;
 
+import com.learnJava.data.Student;
+import com.learnJava.data.StudentDataBase;
 
+import java.util.List;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 
-# Lab : BiPredicate.
+public class PredicateAndConsumerExample {
+
+    // Filtering criteria!
+    Predicate<Student> p1 = (student) -> student.getGradeLevel() >= 3;
+    Predicate<Student> p2 = (student) -> student.getGpa() >= 3.9;
+
+    // Two inputs.
+    BiConsumer<String, List<String>> studentBiConsumer = (name, activities)  -> System.out.println(name + " : " + activities );
+    Consumer<Student> studentConsumer = ( student -> {
+
+        // If the filtering is fine.
+        if (p1.and(p2).test(student))
+        {
+            // Printing with two inputs.
+             studentBiConsumer.accept(student.getName(), student.getActivities());
+        }
+    });
+
+    public void printNameAndActivities(List<Student> studentList)
+    {
+        studentList.forEach(student -> studentConsumer.accept(student));
+    }
+
+    public static void main(String[] args) {
+        List<Student> studentList = StudentDataBase.getAllStudents();
+        new PredicateAndConsumerExample().printNameAndActivities(studentList);
+    }
+}
+````
+
+# Lab:BiPredicate.
 
 <div align="center">
     <img src="BiPredicate.jpg"  alt="java advanced" width="500"/>
@@ -892,9 +933,9 @@ public class PredicateStudentExample {
 
 - **Function** represents function by **taking** one input `(T)` and **returning** one output `(R)`.
 
-# Lab : Function - Function Interface - Part 2.
+# Lab:Function - Function Interface - Part 2.
 
-# Lab : BiFunction Functional Interface.
+# Lab:BiFunction Functional Interface.
 
 <div align="center">
     <img src="BiFunction.jpg"  alt="java advanced" width="600"/>
@@ -902,12 +943,11 @@ public class PredicateStudentExample {
 
 - **BiFunction** represents function by **taking two input** `(T, U)` and **returning** one output `(R)`.
 
-# Lab : UnaryOperator and BinaryOperator Functional Interface.
+# Lab:UnaryOperator and BinaryOperator Functional Interface.
 
 <div align="center">
     <img src="unaryOperator.jpg"  alt="java advanced" width="600"/>
 </div>
-
 
 - todo here.
 
@@ -915,10 +955,9 @@ public class PredicateStudentExample {
     <img src="binaryOperator.jpg"  alt="java advanced" width="600"/>
 </div>
 
-
 - Todo here.
 
-# Lab : Supplier - Functional Interface.
+# Lab:Supplier - Functional Interface.
 
 <div align="center">
     <img src="supplierMethods.jpg"  alt="java advanced" width="600"/>
