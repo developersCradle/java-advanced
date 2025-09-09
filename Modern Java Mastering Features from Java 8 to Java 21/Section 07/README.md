@@ -835,7 +835,7 @@ public class PredicateStudentExample {
 ````
 
 <div align="center">
-    <img src="predicateFilteringExample.jpg"  alt="java advanced" width="900px"/>
+    <img src="predicateFilteringExample.jpg"  alt="java advanced" width="1500px"/>
 </div>
 
 1. There is filter **Predicate** `p1` for filtering based one the **GPA**.
@@ -858,7 +858,6 @@ public class PredicateStudentExample {
             }
         });
     }
-
 ````
 
 # Lab:Combining Predicate + Consumer.
@@ -921,9 +920,171 @@ public class PredicateAndConsumerExample {
 
 - Example code is from. [BiPredicate](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/PredicateAndConsumerExample.java).
 
-
 - **BiPredicate** are used to **test** something. These will return **boolean** as result. 
     - This time it's done with **two inputs** and **one output**!
+
+- We will be exploring the **BiPredicate** from the Java **SDK** as following:
+
+````
+/*
+ * Copyright (c) 2010, 2013, Oracle and/or its affiliates. All rights reserved.
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ *
+ * This code is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 2 only, as
+ * published by the Free Software Foundation.  Oracle designates this
+ * particular file as subject to the "Classpath" exception as provided
+ * by Oracle in the LICENSE file that accompanied this code.
+ *
+ * This code is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+ * version 2 for more details (a copy is included in the LICENSE file that
+ * accompanied this code).
+ *
+ * You should have received a copy of the GNU General Public License version
+ * 2 along with this work; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ * Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA
+ * or visit www.oracle.com if you need additional information or have any
+ * questions.
+ */
+package java.util.function;
+
+import java.util.Objects;
+
+/**
+ * Represents a predicate (boolean-valued function) of two arguments.  This is
+ * the two-arity specialization of {@link Predicate}.
+ *
+ * <p>This is a <a href="package-summary.html">functional interface</a>
+ * whose functional method is {@link #test(Object, Object)}.
+ *
+ * @param <T> the type of the first argument to the predicate
+ * @param <U> the type of the second argument the predicate
+ *
+ * @see Predicate
+ * @since 1.8
+ */
+@FunctionalInterface
+public interface BiPredicate<T, U> {
+
+    /**
+     * Evaluates this predicate on the given arguments.
+     *
+     * @param t the first input argument
+     * @param u the second input argument
+     * @return {@code true} if the input arguments match the predicate,
+     * otherwise {@code false}
+     */
+    boolean test(T t, U u);
+
+    /**
+     * Returns a composed predicate that represents a short-circuiting logical
+     * AND of this predicate and another.  When evaluating the composed
+     * predicate, if this predicate is {@code false}, then the {@code other}
+     * predicate is not evaluated.
+     *
+     * <p>Any exceptions thrown during evaluation of either predicate are relayed
+     * to the caller; if evaluation of this predicate throws an exception, the
+     * {@code other} predicate will not be evaluated.
+     *
+     * @param other a predicate that will be logically-ANDed with this
+     *              predicate
+     * @return a composed predicate that represents the short-circuiting logical
+     * AND of this predicate and the {@code other} predicate
+     * @throws NullPointerException if other is null
+     */
+    default BiPredicate<T, U> and(BiPredicate<? super T, ? super U> other) {
+        Objects.requireNonNull(other);
+        return (T t, U u) -> test(t, u) && other.test(t, u);
+    }
+
+    /**
+     * Returns a predicate that represents the logical negation of this
+     * predicate.
+     *
+     * @return a predicate that represents the logical negation of this
+     * predicate
+     */
+    default BiPredicate<T, U> negate() {
+        return (T t, U u) -> !test(t, u);
+    }
+
+    /**
+     * Returns a composed predicate that represents a short-circuiting logical
+     * OR of this predicate and another.  When evaluating the composed
+     * predicate, if this predicate is {@code true}, then the {@code other}
+     * predicate is not evaluated.
+     *
+     * <p>Any exceptions thrown during evaluation of either predicate are relayed
+     * to the caller; if evaluation of this predicate throws an exception, the
+     * {@code other} predicate will not be evaluated.
+     *
+     * @param other a predicate that will be logically-ORed with this
+     *              predicate
+     * @return a composed predicate that represents the short-circuiting logical
+     * OR of this predicate and the {@code other} predicate
+     * @throws NullPointerException if other is null
+     */
+    default BiPredicate<T, U> or(BiPredicate<? super T, ? super U> other) {
+        Objects.requireNonNull(other);
+        return (T t, U u) -> test(t, u) || other.test(t, u);
+    }
+}
+````
+
+- Example of using **BiPredicate**.
+    - Most **important** thing here is the 
+    - Initialization: `BiPredicat<e<Integer,Double> studentBiPredicate = (gradeLevel, gpa) -> gradeLevel >= 3 && gpa>=3.9;`.
+    - Usage: `if (studentBiPredicate.test(student.getGradeLevel(), student.getGpa()))`. 
+    
+````
+package com.learnJava.functionalInterfaces;
+
+import com.learnJava.data.Student;
+import com.learnJava.data.StudentDataBase;
+
+import java.util.List;
+import java.util.function.BiConsumer;
+import java.util.function.BiPredicate;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+
+public class PredicateAndConsumerExample {
+
+    // Filtering criteria!
+    Predicate<Student> p1 = (student) -> student.getGradeLevel() >= 3;
+    Predicate<Student> p2 = (student) -> student.getGpa() >= 3.9;
+
+    // We will include two Predicates for one Bi Predicate for compact reasons!
+    BiPredicate<Integer,Double> studentBiPredicate = (gradeLevel, gpa) -> gradeLevel >= 3 && gpa>=3.9;
+    // Two inputs.
+    BiConsumer<String, List<String>> studentBiConsumer = (name, activities)  -> System.out.println(name + " : " + activities );
+    Consumer<Student> studentConsumer = ( student -> {
+
+        // If the filtering is fine.
+//        if (p1.and(p2).test(student))
+// We can use combined predicate for the condition.
+        if (studentBiPredicate.test(student.getGradeLevel(), student.getGpa()))
+        {
+            // Printing with two inputs.
+             studentBiConsumer.accept(student.getName(), student.getActivities());
+        }
+    });
+
+    public void printNameAndActivities(List<Student> studentList)
+    {
+        studentList.forEach(student -> studentConsumer.accept(student));
+    }
+
+    public static void main(String[] args) {
+        List<Student> studentList = StudentDataBase.getAllStudents();
+        new PredicateAndConsumerExample().printNameAndActivities(studentList);
+    }
+}
+````
 
 # Lab : Function - Function Interface - Part 1.
 
@@ -931,7 +1092,176 @@ public class PredicateAndConsumerExample {
     <img src="functionMethods.jpg"  alt="java advanced" width="600"/>
 </div>
 
+- Example code is from. [Function Interface](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/FunctionExample.java).
+
 - **Function** represents function by **taking** one input `(T)` and **returning** one output `(R)`.
+    - We can pass **method** as **argument**, and pass this where ever you would need it.
+
+- We will be exploring the **Function** from the Java **SDK** as following:
+
+ ````
+ /*
+ * Copyright (c) 2010, 2013, Oracle and/or its affiliates. All rights reserved.
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ *
+ * This code is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 2 only, as
+ * published by the Free Software Foundation.  Oracle designates this
+ * particular file as subject to the "Classpath" exception as provided
+ * by Oracle in the LICENSE file that accompanied this code.
+ *
+ * This code is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+ * version 2 for more details (a copy is included in the LICENSE file that
+ * accompanied this code).
+ *
+ * You should have received a copy of the GNU General Public License version
+ * 2 along with this work; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ * Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA
+ * or visit www.oracle.com if you need additional information or have any
+ * questions.
+ */
+package java.util.function;
+
+import java.util.Objects;
+
+/**
+ * Represents a function that accepts one argument and produces a result.
+ *
+ * <p>This is a <a href="package-summary.html">functional interface</a>
+ * whose functional method is {@link #apply(Object)}.
+ *
+ * @param <T> the type of the input to the function
+ * @param <R> the type of the result of the function
+ *
+ * @since 1.8
+ */
+@FunctionalInterface
+public interface Function<T, R> {
+
+    /**
+     * Applies this function to the given argument.
+     *
+     * @param t the function argument
+     * @return the function result
+     */
+    R apply(T t);
+
+    /**
+     * Returns a composed function that first applies the {@code before}
+     * function to its input, and then applies this function to the result.
+     * If evaluation of either function throws an exception, it is relayed to
+     * the caller of the composed function.
+     *
+     * @param <V> the type of input to the {@code before} function, and to the
+     *           composed function
+     * @param before the function to apply before this function is applied
+     * @return a composed function that first applies the {@code before}
+     * function and then applies this function
+     * @throws NullPointerException if before is null
+     *
+     * @see #andThen(Function)
+     */
+    default <V> Function<V, R> compose(Function<? super V, ? extends T> before) {
+        Objects.requireNonNull(before);
+        return (V v) -> apply(before.apply(v));
+    }
+
+    /**
+     * Returns a composed function that first applies this function to
+     * its input, and then applies the {@code after} function to the result.
+     * If evaluation of either function throws an exception, it is relayed to
+     * the caller of the composed function.
+     *
+     * @param <V> the type of output of the {@code after} function, and of the
+     *           composed function
+     * @param after the function to apply after this function is applied
+     * @return a composed function that first applies this function and then
+     * applies the {@code after} function
+     * @throws NullPointerException if after is null
+     *
+     * @see #compose(Function)
+     */
+    default <V> Function<T, V> andThen(Function<? super R, ? extends V> after) {
+        Objects.requireNonNull(after);
+        return (T t) -> after.apply(apply(t));
+    }
+
+    /**
+     * Returns a function that always returns its input argument.
+     *
+     * @param <T> the type of the input and output objects to the function
+     * @return a function that always returns its input argument
+     */
+    static <T> Function<T, T> identity() {
+        return t -> t;
+    }
+}
+````
+
+- Simple usage of the **Function**. This time with `.apply()`.
+
+````
+package com.learnJava.functionalInterfaces;
+
+import java.util.function.Function;
+
+public class FunctionExamples {
+
+    static Function<String, String> function = (name) -> name.toUpperCase();
+
+    public static void main(String[] args) {
+        System.out.println("Result is : " + function.apply("java8"));
+    }
+}
+````
+
+- Next we will explore `.andhen()`.
+
+````
+package com.learnJava.functionalInterfaces;
+
+
+import java.util.function.Function;
+
+public class FunctionExamples {
+
+    static Function<String, String> function = (name) -> name.toUpperCase();
+
+    static Function<String, String> addSomeString = (name) -> name.toUpperCase().concat("default");
+
+
+    public static void main(String[] args) {
+
+        System.out.println("Result is : " + function.apply("java8"));
+
+        System.out.println("Result is andThen : " + function.andThen(addSomeString).apply("java8"));
+    }
+}
+
+````
+
+<div align="center">
+    <img src="usingOfAndThen.PNG"  alt="java advanced" width="1500px"/>
+</div>
+
+
+1. You can see the output of the `.andThen` function. Calling order will be:
+    - **FIRST** `function`.
+    - **SECOND** `.andThen(addSomeString)`.
+        - **INPUT** The input for all of this `.apply("java8"));`.
+
+
+- Next we will explore `.compose()`.
+    - 
+
+- `System.out.println("Result is andThen : " + function.compose(addSomeString).apply("java8"));`.
+
+
+
 
 # Lab:Function - Function Interface - Part 2.
 
@@ -949,7 +1279,6 @@ public class PredicateAndConsumerExample {
     <img src="unaryOperator.jpg"  alt="java advanced" width="600"/>
 </div>
 
-- todo here.
 
 <div align="center">
     <img src="binaryOperator.jpg"  alt="java advanced" width="600"/>
