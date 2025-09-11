@@ -117,11 +117,11 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 17](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2017#section-17-defaultstatic-methods-in-interfaces) - Default/Static Methods in Interfaces.
 - [ ] [Section 18](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2018#section-18-new-datetime-apis) - New Date/Time APIs.
 - [ ] [Section 19](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2019#section-19-base-project-setup-for-exploring-java-9-and-beyond-features) - Base Project Setup for Exploring Java 9 and Beyond Features.
-- [ ] [Section 20](#) - Local Variable Type Inference (LVTI) using var.
-- [ ] [Section 21](#) - Text Blocks.
-- [ ] [Section 22](#) - Enhanced Switch.
-- [ ] [Section 23](#) - Records.
-- [ ] [Section 24](#) - Sealed Classes/Interfaces.
+- [ ] [Section 20](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2020#section-20-local-variable-type-inference-lvti-using-var) - Local Variable Type Inference (LVTI) using var.
+- [ ] [Section 21](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2021/README.md#section-21-text-blocks) - Text Blocks.
+- [ ] [Section 22](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2022#section-22-enhanced-switch) - Enhanced Switch.
+- [ ] [Section 23](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2023#section-23-records) - Records.
+- [ ] [Section 24](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2024#section-24-sealed-classesinterfaces) - Sealed Classes/Interfaces.
 - [ ] [Section 25](#) - Pattern Matching.
 - [ ] [Section 26](#) - Checkout/Service Application (Real Time Usecase).
 - [ ] [Section 27](#) - Simple Web Server.

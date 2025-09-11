@@ -1,19 +1,20 @@
-# Section 07: Lambdas and Functional Interfaces. 
+# Section 28: New Http Client.
 
-Lambdas and Functional Interfaces.
+New Http Client.
 
 # What I Learned.
 
-# Introduction to Functional Interfaces.
-# Lab : Consumer Functional Interface - Part 1.
-# Lab : Consumer Functional Interface - Part 2.
-# Lab : BiConsumer Functional Interface.
-# Lab : Predicate - Functional Interface - Part 1.
-# Lab : Predicate - Functional Interface - Part 2.
-# Lab : Combining Predicate + Consumer.
-# Lab : BiPredicate.
-# Lab : Function - Function Interface - Part 1.
-# Lab : Function - Function Interface - Part 2.
-# Lab : BiFunction Functional Interface.
-# Lab : UnaryOperator and BinaryOperator Functional Interface.
-# Lab : Supplier - Functional Interface.
+# New HttpClient - GET Request to retrieve movie by ID.
+
+<div align="center">
+    <img src="httpClient2.PNG"  alt="java advanced" width="500"/>
+</div>
+
+1. This was **released** in **Java 11**.
+2. This supports **Synchronous** and **Asynchronous** mode. 
+
+# JUnit test for the HTTP Client.
+
+# Build HTTPClient in Asynchronous mode.
+
+# Build HTTP Client - GET Request to Retrieve AllMovies.
