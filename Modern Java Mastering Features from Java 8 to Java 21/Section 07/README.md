@@ -1423,7 +1423,7 @@ public interface BiFunction<T, U, R> {
 }
 ````
 
-- In this example, we are using this for testing based on certain **predicate** for given **list**.
+- In this example, we are using this for testing based on certain **Predicate** for given **list**.
 
 ````
 package com.learnJava.functionalInterfaces;
@@ -1466,22 +1466,336 @@ public class BiFunctionExample {
 }
 ````
 
-
 # Lab:UnaryOperator and BinaryOperator Functional Interface.
+
+> In general, they are to make **emphasis** on types. For these types, the **input** and the **output** are the same type!
 
 <div align="center">
     <img src="unaryOperator.jpg"  alt="java advanced" width="600"/>
 </div>
 
+- Code for **UnaryOperator** [Example Unary Operator](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/UnaryOperatorExample.java).
+
+
+- **UnaryOperator** represents and behave like **Function** by **taking input** `(T)` and returning **same type** `(T)` as output.
+    - Specialized version of the **Function**. This just returns the same type as in input. 
+
+- We will be exploring the **UnaryOperator** from the Java **SDK** as following:
+
+````
+/*
+ * Copyright (c) 2012, 2013, Oracle and/or its affiliates. All rights reserved.
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ *
+ * This code is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 2 only, as
+ * published by the Free Software Foundation.  Oracle designates this
+ * particular file as subject to the "Classpath" exception as provided
+ * by Oracle in the LICENSE file that accompanied this code.
+ *
+ * This code is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+ * version 2 for more details (a copy is included in the LICENSE file that
+ * accompanied this code).
+ *
+ * You should have received a copy of the GNU General Public License version
+ * 2 along with this work; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ * Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA
+ * or visit www.oracle.com if you need additional information or have any
+ * questions.
+ */
+package java.util.function;
+
+/**
+ * Represents an operation on a single operand that produces a result of the
+ * same type as its operand.  This is a specialization of {@code Function} for
+ * the case where the operand and result are of the same type.
+ *
+ * <p>This is a <a href="package-summary.html">functional interface</a>
+ * whose functional method is {@link #apply(Object)}.
+ *
+ * @param <T> the type of the operand and result of the operator
+ *
+ * @see Function
+ * @since 1.8
+ */
+@FunctionalInterface
+public interface UnaryOperator<T> extends Function<T, T> {
+
+    /**
+     * Returns a unary operator that always returns its input argument.
+     *
+     * @param <T> the type of the input and output of the operator
+     * @return a unary operator that always returns its input argument
+     */
+    static <T> UnaryOperator<T> identity() {
+        return t -> t;
+    }
+}
+````
+
+- Our simple example of the **Unary operator**.
+    - This make input as **uppercase**!
+
+````
+package com.learnJava.functionalInterfaces;
+
+import java.util.function.UnaryOperator;
+
+public class UnaryOperatorExample {
+
+
+    static UnaryOperator<String> unaryOperator = (string) -> string.toUpperCase();
+    public static void main(String[] args) {
+        System.out.println(unaryOperator.apply("is this lower?"));
+    }
+}
+````
 
 <div align="center">
     <img src="binaryOperator.jpg"  alt="java advanced" width="600"/>
 </div>
 
-- Todo here.
+- Example code is from. [Example BinaryOperator Operator](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/BinaryOperatorExample.java).
+
+- **BinaryOperator** represents and behave like **Function**, but with **combining two input** `(T t1, T t2);` and returning **same type** `(T)` as output. 
+    - Is for **combining** **two** values, not for transforming one.
+
+- We will be exploring the **BinaryOperator** from the Java **SDK** as following:
+
+
+````
+/*
+ * Copyright (c) 2010, 2013, Oracle and/or its affiliates. All rights reserved.
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ *
+ * This code is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 2 only, as
+ * published by the Free Software Foundation.  Oracle designates this
+ * particular file as subject to the "Classpath" exception as provided
+ * by Oracle in the LICENSE file that accompanied this code.
+ *
+ * This code is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+ * version 2 for more details (a copy is included in the LICENSE file that
+ *
+ * You should have received a copy of the GNU General Public License version
+ * 2 along with this work; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ * Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA
+ * or visit www.oracle.com if you need additional information or have any
+ * questions.
+ */
+package java.util.function;
+
+import java.util.Objects;
+import java.util.Comparator;
+
+/**
+ * Represents an operation upon two operands of the same type, producing a result
+ * of the same type as the operands.  This is a specialization of
+ * {@link BiFunction} for the case where the operands and the result are all of
+ * the same type.
+ *
+ * <p>This is a <a href="package-summary.html">functional interface</a>
+ * whose functional method is {@link #apply(Object, Object)}.
+ *
+ * @param <T> the type of the operands and result of the operator
+ *
+ * @see BiFunction
+ * @see UnaryOperator
+ * @since 1.8
+ */
+@FunctionalInterface
+public interface BinaryOperator<T> extends BiFunction<T,T,T> {
+    /**
+     * Returns a {@link BinaryOperator} which returns the lesser of two elements
+     * according to the specified {@code Comparator}.
+     *
+     * @param <T> the type of the input arguments of the comparator
+     * @param comparator a {@code Comparator} for comparing the two values
+     * @return a {@code BinaryOperator} which returns the lesser of its operands,
+     *         according to the supplied {@code Comparator}
+     * @throws NullPointerException if the argument is null
+     */
+    public static <T> BinaryOperator<T> minBy(Comparator<? super T> comparator) {
+        Objects.requireNonNull(comparator);
+        return (a, b) -> comparator.compare(a, b) <= 0 ? a : b;
+    }
+
+    /**
+     * Returns a {@link BinaryOperator} which returns the greater of two elements
+     * according to the specified {@code Comparator}.
+     *
+     * @param <T> the type of the input arguments of the comparator
+     * @param comparator a {@code Comparator} for comparing the two values
+     * @return a {@code BinaryOperator} which returns the greater of its operands,
+     *         according to the supplied {@code Comparator}
+     * @throws NullPointerException if the argument is null
+     */
+    public static <T> BinaryOperator<T> maxBy(Comparator<? super T> comparator) {
+        Objects.requireNonNull(comparator);
+        return (a, b) -> comparator.compare(a, b) >= 0 ? a : b;
+    }
+}
+````
+
+- Example usage of the **BinaryOperator**.
+
+````
+package com.learnJava.functionalInterfaces;
+
+import java.util.function.BinaryOperator;
+
+public class BinaryOperatorExample {
+
+    static BinaryOperator<Integer> binaryOperator = (a,b) -> a+b;
+
+    public static void main(String[] args) {
+        System.out.println(binaryOperator.apply(1,2));
+    }
+}
+````
+
+- Example of using `.maxBy()` of the **BinaryOperator**.
+
+````
+package com.learnJava.functionalInterfaces;
+
+import java.util.Comparator;
+import java.util.function.BinaryOperator;
+
+public class BinaryOperatorExample {
+
+    static Comparator<Integer> comparator = (a,b) -> a.compareTo(b);
+
+    public static void main(String[] args) {
+
+        BinaryOperator<Integer> maxBy = BinaryOperator.maxBy(comparator);
+        System.out.println("Result of MaxBy is : " + maxBy.apply(4,5));
+    }
+}
+````
+
+- Example using `.minBy()` of the **BinaryOperator**.
+
+````
+package com.learnJava.functionalInterfaces;
+
+import java.util.Comparator;
+import java.util.function.BinaryOperator;
+
+public class BinaryOperatorExample {
+
+    static Comparator<Integer> comparator = (a,b) -> a.compareTo(b);
+
+    static BinaryOperator<Integer> binaryOperator = (a,b) -> a+b;
+
+    public static void main(String[] args) {
+
+        System.out.println(binaryOperator.apply(1,2));
+
+
+        BinaryOperator<Integer> minBy = BinaryOperator.minBy(comparator);
+        System.out.println("Result of MinBy is : " + minBy.apply(4,5));
+
+    }
+}
+````
 
 # Lab:Supplier - Functional Interface.
 
 <div align="center">
     <img src="supplierMethods.jpg"  alt="java advanced" width="600"/>
 </div
+
+- **Supplier** takes **no arguments** and **returns a result**. It supplies the value.
+
+- Example code is from. [Example Supplier Operator](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/functionalInterfaces/SupplierExample.java).
+
+- We will be exploring the **Supplier** from the Java **SDK** as following:
+
+````
+/*
+ * Copyright (c) 2012, 2013, Oracle and/or its affiliates. All rights reserved.
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ *
+ * This code is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 2 only, as
+ * published by the Free Software Foundation.  Oracle designates this
+ * particular file as subject to the "Classpath" exception as provided
+ * by Oracle in the LICENSE file that accompanied this code.
+ *
+ * This code is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+ * version 2 for more details (a copy is included in the LICENSE file that
+ * accompanied this code).
+ *
+ * You should have received a copy of the GNU General Public License version
+ * 2 along with this work; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ * Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA
+ * or visit www.oracle.com if you need additional information or have any
+ * questions.
+ */
+package java.util.function;
+
+/**
+ * Represents a supplier of results.
+ *
+ * <p>There is no requirement that a new or distinct result be returned each
+ * time the supplier is invoked.
+ *
+ * <p>This is a <a href="package-summary.html">functional interface</a>
+ * whose functional method is {@link #get()}.
+ *
+ * @param <T> the type of results supplied by this supplier
+ *
+ * @since 1.8
+ */
+@FunctionalInterface
+public interface Supplier<T> {
+
+    /**
+     * Gets a result.
+     *
+     * @return a result
+     */
+    T get();
+}
+````
+
+- Examples using **Supplier**. 
+
+````
+package com.learnJava.functionalInterfaces;
+
+import com.learnJava.data.Student;
+import com.learnJava.data.StudentDataBase;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Supplier;
+
+public class SupplierOperatorExample {
+
+    public static void main(String[] args)
+    {
+        Supplier<Student> studentSupplier = () -> {
+            return new Student("Adam",2,3.6, "male", Arrays.asList("swimming", "basketball","volleyball"));
+        };
+
+        Supplier<List<Student>> listSupplier = () -> StudentDataBase.getAllStudents();
+
+        System.out.println("Student is : " + studentSupplier.get());
+        System.out.println("Student are : " + listSupplier.get());
+    }
+}
+````

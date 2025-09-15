@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.BiFunction;
 import java.util.function.Predicate;
+import java.util.function.UnaryOperator;
 
 public class BiFunctionExample {
 
@@ -35,4 +36,6 @@ public class BiFunctionExample {
         System.out.println(biFunction.apply(StudentDataBase.getAllStudents(),PredicateStudentExample.p2));
 //        getLoginLocs.apply("locator","elementType");
     }
+
+
 }
