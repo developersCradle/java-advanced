@@ -4,16 +4,28 @@ Lambdas and Local variables (Effectively Final).
 
 # What I Learned.
 
-# Introduction to Functional Interfaces.
-# Lab : Consumer Functional Interface - Part 1.
-# Lab : Consumer Functional Interface - Part 2.
-# Lab : BiConsumer Functional Interface.
-# Lab : Predicate - Functional Interface - Part 1.
-# Lab : Predicate - Functional Interface - Part 2.
-# Lab : Combining Predicate + Consumer.
-# Lab : BiPredicate.
-# Lab : Function - Function Interface - Part 1.
-# Lab : Function - Function Interface - Part 2.
-# Lab : BiFunction Functional Interface.
-# Lab : UnaryOperator and BinaryOperator Functional Interface.
-# Lab : Supplier - Functional Interface.
+# Lab : Local Variables in Lambda Expression.
+
+<div align="center">
+    <img src="lambdasAndLocalVariables.PNG"  alt="java advanced" width="500"/>
+</div>
+
+
+1. **Local Variables**
+    - **Variable** declared inside method.
+2. As summary **Lambda Expression**, has **two** restrictions:
+    - The Fist **Restriction** example:
+    ````
+    public static void main(String[] args) {
+
+        int i=0; // Repeated variable name not allowed.
+         Consumer<Integer> c1 = (i) -> {
+//        Consumer<Integer> c1 = (a) -> {
+            //int i=0;
+            System.out.println(i);
+        };
+
+    }
+    ````
+
+

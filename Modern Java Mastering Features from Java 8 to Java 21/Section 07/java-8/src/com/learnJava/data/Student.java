@@ -11,6 +11,9 @@ public class Student {
 
     List<String> activities = new ArrayList<>();
 
+    public Student() {
+
+    }
 
     public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities) {
         this.name = name;
@@ -19,6 +22,13 @@ public class Student {
         this.gender = gender;
         this.activities = activities;
     }
+
+    // We will create the empty constructor for the Constructor Reference.
+    public Student(String s) {
+        this.name = s;
+    }
+
+
 
     public String getGender() {
         return gender;
@@ -31,7 +41,10 @@ public class Student {
     public String getName() {
         return name;
     }
-
+    public void pringListOfTheActivities()
+    {
+        System.out.println(activities);
+    }
     public void setName(String name) {
         this.name = name;
     }
