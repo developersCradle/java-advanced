@@ -7,10 +7,10 @@ public class LambdaVariable1 {
 
     public static void main(String[] args) {
 
-        int i=0; // Repeated variable name not allowed.
+        int i = 0; // Repeated variable name not allowed.
          Consumer<Integer> c1 = (i) -> {
 //        Consumer<Integer> c1 = (a) -> {
-            //int i=0;
+            int i=2;
             System.out.println(i);
         };
 

@@ -40,9 +40,9 @@ Constructor and Method References.
 1. In example, there are **two** things which this function does. So **not** possible.
     - There is **work around**.
 
-# Lab: Method Reference - Function.  
+# Lab: Method Reference - Function.
 
-- Example code is from. [Example Method Reference Function](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/methodreference/FunctionMethodReferenceExample.java).
+- Example code is from. [Example Method Reference Function](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/methodreferences/FunctionMethodReferenceExample.java).
 
 - We will be implementing the `Function` with the **Method reference** and with the **Lambda Expression** approach.
 
