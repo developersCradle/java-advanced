@@ -11,6 +11,7 @@ public class LambdaVariable2 {
          int value = 4; // Effectively final.
 
         Consumer<Integer> c1 = (a) -> {
+            // Continue this form the Java Advanced todo heikki.
             value = 6;
             //  System.out.println(i+value);
         };

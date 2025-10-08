@@ -6,6 +6,10 @@ Streams API.
 
 # Introduction to Streams.
 
+<div align="center">
+    <img src="streamApi.PNG"  alt="java advanced" width="500"/>
+</div>
+
 # How Stream API works?
 
 # Comparing Streams vs Collections.

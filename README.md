@@ -106,7 +106,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Section 06](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2006#section-06-introduction-to-lambda) - Introduction to Lambda. ✅
 - [x] [Section 07](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2007#section-07-lambdas-and-functional-interfaces) - Lambdas and Functional Interfaces. ✅
 - [x] [Section 08](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2008/README.md#section-08-constructor-and-method-references) - Constructor and Method References. ✅
-- [ ] [Section 09](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2009/README.md#section-09-lambdas-and-local-variables-effectively-final) - Lambdas and Local variables (Effectively Final).
+- [x] [Section 09](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2009/README.md#section-09-lambdas-and-local-variables-effectively-final) - Lambdas and Local variables (Effectively Final). ✅
 - [ ] [Section 10](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2010/README.md#section-10-streams-api) - Streams API.
 - [ ] [Section 11](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2011#section-11-stream-api---operations) - Stream API - Operations.
 - [ ] [Section 12](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2012#section-12-streams-api---factory-methods) - Streams API - Factory Methods.
@@ -132,4 +132,50 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 #### Additional stuff.
 
 - This course uses the following repo. [Modern Java repo](https://github.com/dilipsundarraj1/modern-java).
+
+<p align="center">
+    <img id="Advanced Java Topics: Java Reflection - Master Class" src="Refactoring into Chain of Responsibility from Legacy Code caption.png" style="height: 130px; width: 900px;">
+</p>
+
+![Refactoring into Chain of Responsibility from Legacy Code]( Refactoring%20into%20Chain%20of%20Responsibility%20from%20Legacy%20Code%20desc.PNG)
+
+All course material from Refactoring into Chain of Responsibility from Legacy Code
+by
+
+Contains my own notes with some course material to enforce learning experience.
+
+<!-- add this comment later 
+This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️ -->
+
+[The course at Udemy](https://www.udemy.com/course/pyramid-of-refactoring-java-chain-of-poker-hands/). 
+
+[Content maker](https://refactoring.pl/en/recent-posts/).
+
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+<div align="center">
+    Insert certificate here when completed
+</div>
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+#### Progress/Curriculum.
+
+- [ ] [Section 01](#) - Course Outline.
+- [ ] [Section 02](#) - Introduction to the course.
+- [ ] [Section 03](#) - First refactoring activities.
+- [ ] [Section 04](#) - Finalize building blocks of the core logic.
+- [ ] [Section 05](#) - Single Responsibility Principle - Classes.
+- [ ] [Section 06](#) - Summary.
+
+
+#### Additional stuff.
+
+- [ ] todo.
 
