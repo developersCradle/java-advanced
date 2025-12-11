@@ -1,5 +1,4 @@
 
-
 <p align="center">
     <img id="studying" src="JavaAdvancedCaption.png" style="height: 100px; width: 900px;">
   <text>Attempt to study <b>Java</b> itself!</text>
@@ -14,7 +13,7 @@
     - `git config --global core.longpaths true`.
 
 <p align="center">
-    <img id="Advanced Java Topics: Java Reflection - Master Class" src="Advanced Java Topics Java Reflection Master Class caption.png" style="height: 90px; width: 900px;">
+    <img id="Advanced Java Topics: Java Reflection - Master Class" src="Advanced_Java_Topics_Java_Reflection_Master_Class_caption.png" style="height: 110px; width: 900px;">
 </p>
 
 ![Advanced Java Topics: Java Reflection - Master Class]( Advanced%20Java%20Topics%20Java%20Reflection%20Master%20Class%20desc.png)
@@ -151,7 +150,6 @@ This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE
 
 [Content maker](https://refactoring.pl/en/recent-posts/).
 
-
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 <!-- 
@@ -173,7 +171,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 04](#) - Finalize building blocks of the core logic.
 - [ ] [Section 05](#) - Single Responsibility Principle - Classes.
 - [ ] [Section 06](#) - Summary.
-
 
 #### Additional stuff.
 
