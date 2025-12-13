@@ -96,12 +96,102 @@ String firstName = Optional.ofNullable(obj)
 
 </details>
 
-<hr>
+# Introduction to Optional.
+
+- [The source code for the chapter](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/optional/OptionalExample.java).
 
 <div align="center">
     <img src="introductionToOptionals.PNG"  alt="java advanced" width="500"/>
 </div>
 
+1. `Optional` is to represent the `non-null` value.
+
+2. This to avoids the `non null` exception and other point is to make clearer to make null checks.
 
 
+<details>
+<summary id="Exmample of the Student database" open="false"> <b>StudentDataBase</b> Example:</summary>
+
+````
+package com.learnJava.data;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Supplier;
+
+public class StudentDataBase {
+
+    public static Supplier<Student> studentSupplier = () -> {
+       return new Student("Adam",2,3.6, "male",Arrays.asList("swimming", "basketball","volleyball"));
+    };
+
+    /**
+     * Total of 6 students in the database.
+     * @return
+     */
+    public static List<Student> getAllStudents(){
+
+        /**
+         * 2nd grade students
+         */
+        Student student1 = new Student("Adam",2,3.6, "male",Arrays.asList("swimming", "basketball","volleyball"),11);
+        Student student2 = new Student("Jenny",2,3.8,"female", Arrays.asList("swimming", "gymnastics","soccer"),12);
+        /**
+         * 3rd grade students
+         */
+        Student student3 = new Student("Emily",3,4.0,"female", Arrays.asList("swimming", "gymnastics","aerobics"),10);
+        Student student4 = new Student("Dave",3,3.9,"male", Arrays.asList("swimming", "gymnastics","soccer"),9);
+        /**
+         * 4th grade students
+         */
+        Student student5 = new Student("Sophia",4,3.5,"female", Arrays.asList("swimming", "dancing","football"),15);
+        Student student6 = new Student("James",4,3.9,"male", Arrays.asList("swimming", "basketball","baseball","football"),14);
+
+        List<Student> students = Arrays.asList(student1,student2,student3,student4,student5,student6);
+        return students;
+    }
+
+}
+````
+
+</details>
+
+- Example of use case, where we can have `null` value.
+
+````
+    public static String getStudentName(){
+
+        Student student = StudentDataBase.studentSupplier.get();
+//        Student student = null;
+        if(student!=null){
+            return student.getName();
+        }
+
+        return null;
+    }
+````
+
+
+
+
+- `Student student = StudentDataBase.studentSupplier.get();`.
+    - We are getting student using following.
+
+<details>
+<summary id="Code example" open="false"> Code examples after this chapter. </summary>
+
+- Code goes here:
+
+
+</details>
+
+# Lab: Optional — `empty()`, `ofNullable()`, `of()`.
+
+# Lab: `orElse()`, `orElseGet()`, `orElseThrow()`.
+
+# Lab: `ifPresent()`, `isPresent()`.
+
+# Lab: `map()`, `flatMap()`, `filter()` — Part 1.
+
+# Lab: `map()`, `flatMap()`, `filter()` — Part 2.
 

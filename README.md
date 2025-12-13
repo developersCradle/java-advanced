@@ -132,6 +132,25 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - This course uses the following repo. [Modern Java repo](https://github.com/dilipsundarraj1/modern-java).
 
+- Use the `.gif` tool for making illustrations! Check the chapters and make GIFs out of it.
+
+- Reduce the examples in code into the dropdowns!
+
+<details>
+
+<summary id="The course structure" open="true"> <b>We will follow this project structure:</b> </summary>
+
+
+<img src="followingStructureForTheCourse.PNG" alt="alt text" width="300"/>
+
+1. `java-8` is the **project** name.
+2. The **individual** concept is inside **package**. Example `lambdas`.
+
+</details>
+
+- When the time comes, include the latest project code to projects as faterfall.
+
+
 <p align="center">
     <img id="Advanced Java Topics: Java Reflection - Master Class" src="Refactoring into Chain of Responsibility from Legacy Code caption.png" style="height: 130px; width: 900px;">
 </p>
