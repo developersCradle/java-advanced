@@ -133,6 +133,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - This course uses the following repo. [Modern Java repo](https://github.com/dilipsundarraj1/modern-java).
 
 - Use the `.gif` tool for making illustrations! Check the chapters and make GIFs out of it.
+- Do the again the `Optional` chapter, added it there.
 
 - Reduce the examples in code into the dropdowns!
 

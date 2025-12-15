@@ -101,16 +101,31 @@ String firstName = Optional.ofNullable(obj)
 - [The source code for the chapter](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/optional/OptionalExample.java).
 
 <div align="center">
-    <img src="introductionToOptionals.PNG"  alt="java advanced" width="500"/>
+    <img src="introductionToOptionals.PNG"  alt="java advanced" width="600"/>
 </div>
 
 1. `Optional` is to represent the `non-null` value.
 
 2. This to avoids the `non null` exception and other point is to make clearer to make null checks.
 
+- **Example** of use case, where we can have `null` value, but we have **some** value:
+
+````
+    public static String getStudentName(){
+
+        Student student = StudentDataBase.studentSupplier.get();
+//        Student student = null;
+        if(student!=null){
+            return student.getName();
+        }
+
+        return null;
+    }
+````
 
 <details>
-<summary id="Exmample of the Student database" open="false"> <b>StudentDataBase</b> Example:</summary>
+<summary id="Exmample of the Student database" open="false"> <b>StudentDataBase</b> behind the scenes:</summary>
+
 
 ````
 package com.learnJava.data;
@@ -153,16 +168,22 @@ public class StudentDataBase {
 
 }
 ````
-
 </details>
 
-- Example of use case, where we can have `null` value.
+- `Student student = StudentDataBase.studentSupplier.get();`.
+    - We are getting student length using following, when there is `Student` found.
+
+<div align="center">
+    <img src="OptionalUserCaseIllustration.gif"  alt="java advanced" width="600"/>
+</div>
+
+- **Example** of use case, where we will have `null` value:
 
 ````
     public static String getStudentName(){
 
-        Student student = StudentDataBase.studentSupplier.get();
-//        Student student = null;
+//        Student student = StudentDataBase.studentSupplier.get();
+        Student student = null;
         if(student!=null){
             return student.getName();
         }
@@ -171,19 +192,100 @@ public class StudentDataBase {
     }
 ````
 
+- Illustration and code below where there is `null` value present.
 
+````
+    public static Optional<String> getStudentNameOptional(){
 
+        Optional<Student> studentOptional = Optional.ofNullable(StudentDataBase.studentSupplier.get());
+//        Optional<Student> studentOptional = Optional.ofNullable(null); // Optional.empty()
+        if(studentOptional.isPresent()){
+            studentOptional.get(); //Student
+            return studentOptional.map(Student::getName); //Optional<String>
+        }
 
-- `Student student = StudentDataBase.studentSupplier.get();`.
-    - We are getting student using following.
+        return Optional.empty(); // Represents an optional object with no value
+    }
+````
+
+<div align="center">
+    <img src="OptionalUserCaseIllustrationWhenThereIsNullValue.gif" width="600"/>
+</div>
+
+- We will be getting `Student`, with the `Optional` code: 
+
+````
+ public static Optional<String> getStudentNameOptional(){
+
+        Optional<Student> studentOptional = Optional.ofNullable(StudentDataBase.studentSupplier.get());
+//        Optional<Student> studentOptional = Optional.ofNullable(null); // Optional.empty()
+        if(studentOptional.isPresent()){
+            studentOptional.get(); //Student
+            return studentOptional.map(Student::getName); //Optional<String>
+        }
+
+        return Optional.empty(); // Represents an optional object with no value
+    }
+````
+
+- We will be wrapping the **Object** inside:
+    - `Optional<Student> studentOptional = Optional.ofNullable(StudentDataBase.studentSupplier.get());`.
+
+````
+        if(studentOptional.isPresent()){
+//            return studentOptional.get(); //Student
+            return studentOptional.map(Student::getName); //Optional<String>
+        }
+````
+
+- We will be checking if the **Optional** is there `if(studentOptional.isPresent())`.
+
+- Furthermore, we will be using `Map` to return the `Optional<String>`.
+    - As following: `return studentOptional.map(Student::getName);`.
+        
+- Represents an optional object with **no value!** `return Optional.empty();`.
+
 
 <details>
-<summary id="Code example" open="false"> Code examples after this chapter. </summary>
+<summary id="Code example" open="false"> Realcase: <b>Optional</b> vs <b>real case</b> </summary>
 
-- Code goes here:
+## Real case:
 
+- This returns the `null`, but anything can be `null`.
 
+````
+public static String getStudentName(){
+
+//        Student student = StudentDataBase.studentSupplier.get();
+        Student student = null;
+        if(student!=null){
+            return student.getName();
+        }
+
+        return null;
+    }
+````
+
+## Optional case:
+
+- This returns the <b>Optional</b> rather than the `null`.
+
+````
+    public static Optional<String> getStudentNameOptional(){
+//        Optional<Student> studentOptional = Optional.ofNullable(StudentDataBase.studentSupplier.get());
+        Optional<Student> studentOptional = Optional.ofNullable(null); // Optional.empty()
+        if(studentOptional.isPresent()){
+//            return studentOptional.get(); //Student
+            return studentOptional.map(Student::getName); //Optional<String>
+        }
+        return Optional.empty(); // Represents an optional object with no value
+    }
+````
 </details>
+
+
+
+
 
 # Lab: Optional — `empty()`, `ofNullable()`, `of()`.
 
@@ -192,6 +294,60 @@ public class StudentDataBase {
 # Lab: `ifPresent()`, `isPresent()`.
 
 # Lab: `map()`, `flatMap()`, `filter()` — Part 1.
+
+
+
+
+<details>
+<summary id="Code example" open="false"> Code afer this chapter:</summary>
+
+````
+package com.learnJava.optional;
+
+import com.learnJava.data.Student;
+import com.learnJava.data.StudentDataBase;
+
+import java.util.Optional;
+
+public class OptionalMapFlatMapExample {
+
+    //filter
+    public static void optionalFilter(){
+
+        Optional<Student> studentOptional =
+            Optional.ofNullable(StudentDataBase.studentSupplier.get()); //Optional<Student>
+
+        studentOptional.
+                filter(student -> student.getGpa()>=4.0)
+                    .ifPresent(student -> System.out.println(student));
+    }
+
+    //map
+    public static  void optionalMap(){
+        Optional<Student> studentOptional =
+                Optional.ofNullable(StudentDataBase.studentSupplier.get()); //Optional<Student>
+
+        if(studentOptional.isPresent()){
+            Optional<String> stringOptional = studentOptional
+                    .filter(student -> student.getGpa()>=3.5)
+                    .map(Student::getName);
+            System.out.println(stringOptional.get());
+        }
+
+    }
+
+    //flatmap
+
+    public static void main(String[] args) {
+
+        optionalFilter();
+        optionalMap();
+    }
+}
+````
+</details>
+
+
 
 # Lab: `map()`, `flatMap()`, `filter()` — Part 2.
 
