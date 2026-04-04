@@ -1,5 +1,5 @@
-# Section 01: 
+# Section 12: Lambda and Collections in depth. 
 
-todo
+Lambda and Collections in depth.
 
 # What I Learned.

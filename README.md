@@ -4,7 +4,7 @@
 
 <p align="center">
     <img src="Java_Karate_Kid__Repository_Graphics.png" alt="Java Karate Kid Graphic!" width="500" height="350"><br>
-    Attempt to study <b>Java</b> itself! Some things which are related to advanced level!
+    Attempt to study <b>Java</b> itself! Some things which are <b>related</b> to advanced level!
 </p>
 
 - For these courses one should configure **GIT** for handle projects.
@@ -64,13 +64,12 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 
 <p align="center">
-    <img id="Modern Java Mastering Features from Java 8 to Java 21" src="Modern Java Mastering Features from Java 8 to Java 21 caption.png" style="height: 90px; width: 900px;">
+    <img id="Modern Java Mastering Features from Java 8 to Java 21" src="Modern_Java_Mastering_Features_From_Java_08_To_Java_21_Caption.png" style="height: 90px; width: 900px;">
 </p>
 
-![Modern Java Mastering Features from Java 8 to Java 21]( Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021%20desc.PNG)
+![Modern Java Mastering Features from Java 8 to Java 21](Modern_Java_Mastering_Features_From_Java_08_To_Java_21_Description.PNG)
 
-All course material from Modern Java Mastering Features from Java 8 to Java 21
-by **Pragmatic Code School** ©. 
+All course material from *Modern Java Mastering Features from Java 8 to Java 21* by **Pragmatic Code School** ©. 
 
 > During a live technical demonstration at **Evitec Solutions**, I was asked to solve a puzzle involving a Java problem that required clean data processing logic. Under normal circumstances, it was a problem perfectly suited for **Java Streams**, but the pressure of the live session caused me to overlook that approach.
 >
@@ -157,19 +156,18 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 <details>
 
-<summary id="Kafka the progress" open="true"> <i>Course map for the </i><b>  Modern Java Courses!</b> </summary>
+<summary id="Kafka the progress" open="true"> <i>Course map for the </i><b> Modern Java Courses! </b> </summary>
 
 <br>
 
 <p align="center">
-    <img src="courseMap.png" alt="Course roadmap to enroll in the Modern Java Courses." width="400"/>
+    <img src="followingStructureForTheCourse.PNG.png" alt="Course roadmap to enroll in the Modern Java Courses." width="400"/>
 </p>
 
 1. You can take this course first: [Modern Java - Learn Java 8 features by coding it](https://www.udemy.com/course/modern-java-learn-java-8-features-by-coding-it/).
 2. You can take this course second: [Multithreading, Parallel & Asynchronous Coding in Modern Java](https://www.udemy.com/course/parallel-and-asynchronous-programming-in-modern-java/).
 
 </details>
-
 
 <p align="center">
     <img id="Advanced Java Topics: Java Reflection - Master Class" src="Refactoring into Chain of Responsibility from Legacy Code caption.png" style="height: 130px; width: 900px;">
@@ -239,8 +237,55 @@ This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE
 
 [The course at Udemy](https://www.udemy.com/course/java-best-practices/). 
 
-
 [Content maker other homepage](https://headeasylabs.com/).
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+<div align="center">
+    Insert certificate here when completed
+</div>
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+#### Progress/Curriculum.
+
+- [ ] [Section 01](#) - Introduction.
+- [ ] [Section 02](#) - Data Types.
+- [ ] [Section 03](#) - Methods.
+- [ ] [Section 04](#) - Classes and interfaces.
+- [ ] [Section 05](#) - Exceptions.
+- [ ] [Section 06](#) - Modern Java Elements.
+- [ ] [Section 07](#) - Other.
+- [ ] [Section 08](#) - Summary.
+
+#### Additional stuff.
+
+- [ ] todo.
+
+# Java Collections from basics to Advanced.
+
+<p>
+    <img src="Java_Collections_From_Basics_To_Advanced_Description.JPG"
+    alt="Java Design Patterns & SOLID Design Principles desc Description"
+    style="width:690px" />
+</p>
+
+All course material from *Java Collections from basics to Advanced* by **Adrian Wiech**!
+
+> Add story here <br><br>
+~ *DevelopersCradle*
+
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
+
+<!-- add this comment later 
+This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️ -->
+
+[The course at Udemy](https://www.udemy.com/course/collections-and-concurrent-collection-video-lectures-and-tutorials/). 
 
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
@@ -272,54 +317,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 13](#) - Streams in Depth and collections.
 - [ ] [Section 14](#) - Generics In Depth.
 - [ ] [Section 15](#) - Thank you!.
-
-#### Additional stuff.
-
-- [ ] todo.
-
-# Java Best Practices: Improve Your Java Coding Standards.
-
-<p>
-    <img src="Java_Best_Practices_Improve_Your_Java_Coding_Standards_Description.JPG"
-    alt="Java Design Patterns & SOLID Design Principles desc Description"
-    style="width:690px" />
-</p>
-
-All course material from *Java Collections from basics to Advanced* by **Adrian Wiech**!
-
-> Add story here <br><br>
-~ *DevelopersCradle*
-
-Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
-
-<!-- add this comment later 
-This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️ -->
-
-[The course at Udemy](https://www.udemy.com/course/java-best-practices/). 
-
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
-
-<!-- 
-Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
-?trk=public_profile_see-credential 
--->
-
-<div align="center">
-    Insert certificate here when completed
-</div>
-
-**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
-
-#### Progress/Curriculum.
-
-- [ ] [Section 01](#) - Introduction.
-- [ ] [Section 02](#) - Data Types.
-- [ ] [Section 03](#) - Methods.
-- [ ] [Section 04](#) - Classes and interfaces.
-- [ ] [Section 05](#) - Exceptions.
-- [ ] [Section 06](#) - Modern Java Elements.
-- [ ] [Section 07](#) - Other.
-- [ ] [Section 08](#) - Summary.
 
 #### Additional stuff.
 

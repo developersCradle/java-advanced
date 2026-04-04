@@ -1,5 +1,5 @@
-# Section 01: 
+# Section 01: Introduction.
 
-todo
+Introduction.
 
 # What I Learned.

@@ -1,5 +1,5 @@
-# Section 01: 
+# Section 07: Lists ArrayList LinkedList Vector and Stack and Cursors. 
 
-todo
+Lists ArrayList LinkedList Vector and Stack and Cursors.
 
 # What I Learned.
