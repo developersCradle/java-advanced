@@ -7,9 +7,8 @@ Introduction to Lambda.
 # What is Lambda?
 
 <div align="center">
-    <img src="whatIsTheLambdaExpression.PNG"  alt="java advanced" width="500"/>
+    <img src="whatIsTheLambdaExpression.PNG"  alt="Java Advanced Course." width="500"/>
 </div>
-
 
 1. **Lambda** can be called, **function without a name**. 
 
@@ -21,15 +20,14 @@ Introduction to Lambda.
 4. In fact in can be passed as a **variable**.
 
 <div align="center">
-    <img src="syntaxOfTheLambdaExpression.PNG"  alt="java advanced" width="500"/>
+    <img src="syntaxOfTheLambdaExpression.PNG"  alt="Java Advanced Course." width="500"/>
 </div>
 
 - **Three** different parts in **Lambda Expression**
 
 <div align="center">
-    <img src="usagesOfTheLambda.PNG"  alt="java advanced" width="500"/>
+    <img src="usagesOfTheLambda.PNG"  alt="Java Advanced Course." width="500"/>
 </div>
-
 
 1. Lambdas are used to implement **Functional Interfaces**.
     - Other names are called also, **SAM**. (**S**ingle **A**bstract **M**ethod).
@@ -40,13 +38,13 @@ Introduction to Lambda.
 - The first version of the **Lambda** will be using the old approach, **Anonymous Class**.
 
 <div align="center">
-    <img src="letsCodeOurFirstLegacyLamda.PNG"  alt="java advanced" width="500"/>
+    <img src="letsCodeOurFirstLegacyLamda.PNG"  alt="Java Advanced Course." width="500"/>
 </div>
 
 - Link to the example, which we will be making. [Link](https://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/lambda/RunnableLambdaExample.javahttps://github.com/dilipsundarraj1/java-8/blob/master/java-8/src/com/learnJava/lambda/RunnableLambdaExample.java).
 
 <div align="center">
-    <img src="anynomousClassExample.jpg"  alt="java advanced" width="500"/>
+    <img src="anynomousClassExample.jpg"  alt="Java Advanced Course." width="500"/>
 </div>
 
 - We are exploring the `interface Runnable`. The definition is below:
@@ -131,7 +129,7 @@ public interface Runnable {
     - `new Thread(runnable).start();` and start this.
 
 <div align="center">
-    <img src="lambdaExpressionExample.jpg"  alt="java advanced" width="500"/>
+    <img src="lambdaExpressionExample.jpg"  alt="Java Advanced Course." width="500"/>
 </div>
 
 -  We are assigning it to the variable using **Lambda expression**.
@@ -151,7 +149,7 @@ public interface Runnable {
     - Example **not** using as variable `new Thread(()-> System.out.println("Inside Runnable 4")).start();`.
 
 <div align="center">
-    <img src="lambdaBestPractives.PNG"  alt="java advanced" width="600"/>
+    <img src="lambdaBestPractives.PNG"  alt="Java Advanced Course." width="600"/>
 </div>
 
 1. If there is only **one** line.
@@ -161,13 +159,13 @@ public interface Runnable {
 > Notice the difference between the styles, when assigning to the **functional interface**!
 
 <div align="center">
-    <img src="lambdaVsLegacy.PNG"  alt="java advanced" width="600"/>
+    <img src="lambdaVsLegacy.PNG"  alt="Java Advanced Course." width="600"/>
 </div>
 
 # Lab : Implement Comparator using Lambda.
 
 <div align="center">
-    <img src="comparitorUsingTheLambdaExpression.jpg"  alt="java advanced" width="600"/>
+    <img src="comparitorUsingTheLambdaExpression.jpg"  alt="Java Advanced Course." width="600"/>
 </div>
 
 - We are exploring the ` interface Comparator<T>`. The definition is below:
@@ -718,7 +716,7 @@ public interface Comparator<T> {
     - `int compare(T o1, T o2);`
     
 <div align="center">
-    <img src="anynomousClassComparatorExample.jpg"  alt="java advanced" width="500"/>
+    <img src="anynomousClassComparatorExample.jpg"  alt="Java Advanced Course." width="500"/>
 </div>
 
 ````
@@ -744,7 +742,7 @@ public interface Comparator<T> {
 
 
 <div align="center">
-    <img src="lambdaexpressionComparatorExample.jpg"  alt="java advanced" width="500"/>
+    <img src="lambdaexpressionComparatorExample.jpg"  alt="Java Advanced Course." width="500"/>
 </div>
 
 - We are using **Lambda Expression** for the Comparator.

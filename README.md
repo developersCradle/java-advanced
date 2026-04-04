@@ -1,11 +1,10 @@
-
 <p align="center">
-    <img id="studying" src="JavaAdvancedCaption.png" style="height: 100px; width: 900px;">
-  <text>Attempt to study <b>Java</b> itself!</text>
+    <img id="studying" src="Java_Advanced_Caption.png" style="width:900px;height:140px;">
 </p>
 
-<p align="center">
-   <img src="ReadyForStudyJavaInDepthOSSSSS.png" alt="alt text" width="400" height="500"/>
+<p align="center">    
+    <img src="Java_Karate_Kid__Repository_Graphics.png" alt="Java Karate Kid Graphic!" width="500" height="350"/>
+    <text>Attempt to study <b>Java</b> itself! Some things which are related to advanced level!</text>
 </p>
 
 - For these courses one should configure **GIT** for handle projects.
@@ -18,10 +17,14 @@
 
 ![Advanced Java Topics: Java Reflection - Master Class]( Advanced%20Java%20Topics%20Java%20Reflection%20Master%20Class%20desc.png)
 
-All course material from Advanced Java Topics: Java Reflection - Master Class
-by **Top Developer Academy LLC** and **Michael Pogrebinsky** ©. 
+All course material from *Advanced Java Topics: Java Reflection - Master Class* by **Top Developer Academy LLC** and **Michael Pogrebinsky** ©. 
 
-Contains my own notes with some course material to enforce learning experience.
+> . 🐟🐟🐟 <br><br>
+~ *DevelopersCradle*
+
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 <!-- add this comment later 
 This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️ -->
@@ -29,9 +32,6 @@ This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE
 [The course at Udemy](https://www.udemy.com/course/java-reflection-master-class/). 
 
 [Content maker](https://topdeveloperacademy.com/).
-
-
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
@@ -41,7 +41,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 <div align="center">
     Insert certificate here when completed
 </div>
-
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -73,7 +72,12 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 All course material from Modern Java Mastering Features from Java 8 to Java 21
 by **Pragmatic Code School** ©. 
 
-Contains my own notes with some course material to enforce learning experience.
+> During a live technical demonstration at **Evitec Solutions**, I was asked to solve a puzzle involving a Java problem that required clean data processing logic. Under normal circumstances, it was a problem perfectly suited for **Java Streams**, but the pressure of the live session caused me to overlook that approach.
+>
+>That moment became a turning point. It pushed me to deeply pursue a course on `Modern Java`, where I strengthened my understanding of streams, functional patterns, and expressive problem-solving techniques. The experience helped me regain confidence and sharpen my ability to apply the right abstractions even in high-pressure situations.<br><br>
+~ *DevelopersCradle*
+
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
 <!-- add this comment later 
 This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️ -->
@@ -133,7 +137,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - This course uses the following repo. [Modern Java repo](https://github.com/dilipsundarraj1/modern-java).
 
 - Use the `.gif` tool for making illustrations! Check the chapters and make GIFs out of it.
-- Do the again the `Optional` chapter, added it there.
+- Do again the `Optional` chapter, added it there.
 
 - Reduce the examples in code into the dropdowns!
 
@@ -149,7 +153,22 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 </details>
 
-- When the time comes, include the latest project code to projects as faterfall.
+- When the time comes, include the latest project code to projects as waterfall.
+
+<details>
+
+<summary id="Kafka the progress" open="true"> <i>Course map for the </i><b>  Modern Java Courses!</b> </summary>
+
+<br>
+
+<p align="center">
+    <img src="courseMap.png" alt="Course roadmap to enroll in the Modern Java Courses." width="400"/>
+</p>
+
+1. You can take this course first: [Modern Java - Learn Java 8 features by coding it](https://www.udemy.com/course/modern-java-learn-java-8-features-by-coding-it/).
+2. You can take this course second: [Multithreading, Parallel & Asynchronous Coding in Modern Java](https://www.udemy.com/course/parallel-and-asynchronous-programming-in-modern-java/).
+
+</details>
 
 
 <p align="center">
@@ -158,10 +177,12 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 ![Refactoring into Chain of Responsibility from Legacy Code]( Refactoring%20into%20Chain%20of%20Responsibility%20from%20Legacy%20Code%20desc.PNG)
 
-All course material from Refactoring into Chain of Responsibility from Legacy Code
-by
+All course material from *Refactoring into Chain of Responsibility from Legacy Code* by **Włodek Krakowski**
 
-Contains my own notes with some course material to enforce learning experience.
+> Add story here <br><br>
+~ *DevelopersCradle*
+
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
 <!-- add this comment later 
 This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️ -->
@@ -196,3 +217,110 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [ ] todo.
 
+<p align="center">
+
+# Java Best Practices: Improve Your Java Coding Standards.
+
+<p>
+    <img src="Java_Best_Practices_Improve_Your_Java_Coding_Standards_Description.JPG"
+    alt="Java Design Patterns & SOLID Design Principles desc Description"
+    style="width:690px" />
+</p>
+
+All course material from *Java Best Practices: Improve Your Java Coding Standards* by **Adrian Wiech**!
+
+> Add story here <br><br>
+~ *DevelopersCradle*
+
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
+
+<!-- add this comment later 
+This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️ -->
+
+[The course at Udemy](https://www.udemy.com/course/java-best-practices/). 
+
+
+[Content maker other homepage](https://headeasylabs.com/).
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+<div align="center">
+    Insert certificate here when completed
+</div>
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+#### Progress/Curriculum.
+
+- [ ] [Section 01](#) - Introduction.
+- [ ] [Section 02](#) - Java Arrays in Depth.
+- [ ] [Section 03](#) - Collections Overview.
+- [ ] [Section 04](#) - Collection Framework.
+- [ ] [Section 05](#) - Collection and Collections.
+- [ ] [Section 06](#) - Generics Overview.
+- [ ] [Section 07](#) - Lists ArrayList LinkedList Vector and Stack and Cursors.
+- [ ] [Section 08](#) - Set Its implementation class and more.
+- [ ] [Section 09](#) - Queues.
+- [ ] [Section 10](#) - Maps & Trees in Depth - Working and its implementation classes.
+- [ ] [Section 11](#) - Concurrent Collections in depth.
+- [ ] [Section 12](#) - Lambda and Collections in depth.
+- [ ] [Section 13](#) - Streams in Depth and collections.
+- [ ] [Section 14](#) - Generics In Depth.
+- [ ] [Section 15](#) - Thank you!.
+
+#### Additional stuff.
+
+- [ ] todo.
+
+# Java Best Practices: Improve Your Java Coding Standards.
+
+<p>
+    <img src="Java_Best_Practices_Improve_Your_Java_Coding_Standards_Description.JPG"
+    alt="Java Design Patterns & SOLID Design Principles desc Description"
+    style="width:690px" />
+</p>
+
+All course material from *Java Collections from basics to Advanced* by **Adrian Wiech**!
+
+> Add story here <br><br>
+~ *DevelopersCradle*
+
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
+
+<!-- add this comment later 
+This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️ -->
+
+[The course at Udemy](https://www.udemy.com/course/java-best-practices/). 
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+<div align="center">
+    Insert certificate here when completed
+</div>
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+#### Progress/Curriculum.
+
+- [ ] [Section 01](#) - Introduction.
+- [ ] [Section 02](#) - Data Types.
+- [ ] [Section 03](#) - Methods.
+- [ ] [Section 04](#) - Classes and interfaces.
+- [ ] [Section 05](#) - Exceptions.
+- [ ] [Section 06](#) - Modern Java Elements.
+- [ ] [Section 07](#) - Other.
+- [ ] [Section 08](#) - Summary.
+
+#### Additional stuff.
+
+- [ ] todo.
