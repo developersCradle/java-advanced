@@ -4,7 +4,7 @@
 
 <p align="center">
     <img src="Java_Karate_Kid__Repository_Graphics.png" alt="Java Karate Kid Graphic!" width="500" height="350">
-    Attempt to study <b>Java</b> itself! Some things which are related to advanced level!
+    <text>Attempt to study <b>Java</b> itself! Some things which are related to advanced level!</text>
 </p>
 
 - For these courses one should configure **GIT** for handle projects.
