@@ -25,7 +25,7 @@ Collection Framework.
 1. It will hold **interfaces** and implementations of the **classes** and **Algorithms** to solve the programmers problems!
 
 <div align="center">
-    <img src="Collection_Hierarchy.JPG"  alt="Java Collections from basics to Advanced Course!" width="600"/>
+    <img src="Collection_Hierarchy_For_Single_Collections.JPG"  alt="Java Collections from basics to Advanced Course!" width="600"/>
 </div>
 
 0. **Collection** came part of **Java** from the version `1.2` **JDK**.
@@ -56,7 +56,9 @@ Collection Framework.
 > [!IMPORTANT]
 > Note these **6** interfaces described are representing discrete objects as **single** unit! 
 
-
+<div align="center">
+    <img src="Collection_Hierarchy_For_Maps.JPG"  alt="Java Collections from basics to Advanced Course!" width="600"/>
+</div>
 
 > [!IMPORTANT]
 > Note these **Map** describing object in **key-value** pairs!

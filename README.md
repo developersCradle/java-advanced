@@ -47,7 +47,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 #### Progress/Curriculum.
 
 - [x] [Section 01](https://github.com/developersCradle/java-advanced/tree/main/Advanced%20Java%20Topics%20Java%20Reflection%20Master%20Class/Section%2001#section-01-introduction-to-reflection) - Introduction to Reflection.
-- [ ] [Section 02](https://github.com/developersCradle/java-advanced/tree/main/Advanced%20Java%20Topics%20Java%20Reflection%20Master%20Class/Section%2002#section-02-object-creation-and-constructors) - Object Creation and Constructors. 
+- [ ] [Section 02](https://github.com/developersCradle/java-advanced/tree/main/Advanced%20Java%20Topics%20Java%20Reflection%20Master%20Class/Section%2002#section-02-object-creation-and-constructors) - Object Creation and Constructors. ⚠️ In progress! ⚠️
 - [ ] [Section 03](https://github.com/developersCradle/java-advanced/tree/main/Advanced%20Java%20Topics%20Java%20Reflection%20Master%20Class/Section%2003#section-03-inspection-of-fields--arrays) - Inspection of Fields & Arrays.
 - [ ] [Section 04](https://github.com/developersCradle/java-advanced/tree/main/Advanced%20Java%20Topics%20Java%20Reflection%20Master%20Class/Section%2004#section-04-field-modification--arrays-creation) - Field Modification & Arrays Creation. 
 - [ ] [Section 05](https://github.com/developersCradle/java-advanced/tree/main/Advanced%20Java%20Topics%20Java%20Reflection%20Master%20Class/Section%2005#section-05-methods-discovery--invocation) - Methods Discovery & Invocation. 
@@ -109,7 +109,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Section 07](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2007#section-07-lambdas-and-functional-interfaces) - Lambdas and Functional Interfaces. ✅
 - [x] [Section 08](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2008/README.md#section-08-constructor-and-method-references) - Constructor and Method References. ✅
 - [x] [Section 09](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2009/README.md#section-09-lambdas-and-local-variables-effectively-final) - Lambdas and Local variables (Effectively Final). ✅
-- [ ] [Section 10](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2010/README.md#section-10-streams-api) - Streams API.
+- [ ] [Section 10](https://github.com/developersCradle/java-advanced/blob/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2010/README.md#section-10-streams-api) - Streams API. ⚠️ In progress! ⚠️
 - [ ] [Section 11](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2011#section-11-stream-api---operations) - Stream API - Operations.
 - [ ] [Section 12](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2012#section-12-streams-api---factory-methods) - Streams API - Factory Methods.
 - [ ] [Section 13](https://github.com/developersCradle/java-advanced/tree/main/Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021/Section%2013#section-13-streams-api---numeric-streams) - Streams API - Numeric Streams.
@@ -204,7 +204,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Section 01](#) - Course Outline.
+- [ ] [Section 01](#) - Course Outline. ⚠️ In progress! ⚠️
 - [ ] [Section 02](#) - Introduction to the course.
 - [ ] [Section 03](#) - First refactoring activities.
 - [ ] [Section 04](#) - Finalize building blocks of the core logic.
@@ -254,7 +254,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Section 01](#) - Introduction.
+- [ ] [Section 01](#) - Introduction. ⚠️ In progress! ⚠️
 - [ ] [Section 02](#) - Data Types.
 - [ ] [Section 03](#) - Methods.
 - [ ] [Section 04](#) - Classes and interfaces.
@@ -267,11 +267,19 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [ ] todo.
 
-# Java Collections from basics to Advanced.
 
-<p>
+
+
+<p align="center">
+    <img
+     src="Java_Collections_From_Basics_To_Advanced_Caption.png"
+    alt=" Java Collections From Basics To Advanced Caption"
+    style="width:1600px;height:110px;"/>
+</p>
+
+<p align="center">
     <img src="Java_Collections_From_Basics_To_Advanced_Description.JPG"
-    alt="Java Design Patterns & SOLID Design Principles desc Description"
+    alt="Java Collections From Basics To Advanced Description"
     style="width:690px" />
 </p>
 
@@ -302,13 +310,13 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Section 01](#) - Introduction.
-- [ ] [Section 02](#) - Java Arrays in Depth.
-- [ ] [Section 03](#) - Collections Overview.
-- [ ] [Section 04](#) - Collection Framework.
-- [ ] [Section 05](#) - Collection and Collections.
-- [ ] [Section 06](#) - Generics Overview.
-- [ ] [Section 07](#) - Lists ArrayList LinkedList Vector and Stack and Cursors.
+- [x] [Section 01](https://github.com/developersCradle/java-advanced/tree/main/Java%20Collections%20from%20basics%20to%20Advanced/Section%2001#section-01-introduction) - Introduction. ✅
+- [x] [Section 02](https://github.com/developersCradle/java-advanced/tree/main/Java%20Collections%20from%20basics%20to%20Advanced/Section%2002#section-02-java-arrays-in-depth) - Java Arrays in Depth. ✅
+- [x] [Section 03](https://github.com/developersCradle/java-advanced/tree/main/Java%20Collections%20from%20basics%20to%20Advanced/Section%2003#section-03-collections-overview) - Collections Overview. ✅
+- [x] [Section 04](https://github.com/developersCradle/java-advanced/tree/main/Java%20Collections%20from%20basics%20to%20Advanced/Section%2004#section-04-collection-framework) - Collection Framework. ✅
+- [x] [Section 05](https://github.com/developersCradle/java-advanced/tree/main/Java%20Collections%20from%20basics%20to%20Advanced/Section%2005#section-05-collection-and-collections) - Collection and Collections. ✅ 
+- [x] [Section 06](https://github.com/developersCradle/java-advanced/tree/main/Java%20Collections%20from%20basics%20to%20Advanced/Section%2006#section-06-generics-overview) - Generics Overview. ✅
+- [ ] [Section 07](https://github.com/developersCradle/java-advanced/tree/main/Java%20Collections%20from%20basics%20to%20Advanced/Section%2007#section-07-lists-arraylist-linkedlist-vector-and-stack-and-cursors) - Lists ArrayList LinkedList Vector and Stack and Cursors. ⚠️ In progress! ⚠️
 - [ ] [Section 08](#) - Set Its implementation class and more.
 - [ ] [Section 09](#) - Queues.
 - [ ] [Section 10](#) - Maps & Trees in Depth - Working and its implementation classes.
