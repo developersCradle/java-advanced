@@ -267,9 +267,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [ ] todo.
 
-
-
-
 <p align="center">
     <img
      src="Java_Collections_From_Basics_To_Advanced_Caption.png"
