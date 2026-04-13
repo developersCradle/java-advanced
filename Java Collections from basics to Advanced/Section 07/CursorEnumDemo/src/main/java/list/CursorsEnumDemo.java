@@ -1,4 +1,4 @@
-package collection;
+package list;
 
 import java.util.Enumeration;
 import java.util.Scanner;
@@ -8,23 +8,22 @@ public class CursorsEnumDemo
 {
     public static void main( String[] args )
     {
-        // Legacy object and with the Enumeration!
-        
         Vector v = new Vector();
-        System.out.println("Enter the elements :");
+        System.out.println("Enter the elements: ");
 
         for (int i = 0; i < 8; i++) {
             Scanner s = new Scanner(System.in);
             Integer data = s.nextInt();
-            v.add(data);
-            // add stuff here
+            v.addElement(data);
         }
 
-        Enumeration e = v.elements();
+        System.out.println("Vector : " + v);
 
-        while(e.hasMoreElements())
+        Enumeration elements = v.elements();
+
+        while (elements.hasMoreElements())
         {
-
+//            Interger element = (Interger) elements.nextElement();
         }
     }
 }
