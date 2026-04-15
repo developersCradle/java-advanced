@@ -325,4 +325,5 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
-- [ ] todo.
+- [ ] Make illustration in `.gif`.
+- [ ] Make summaries for each ds in the chatper!

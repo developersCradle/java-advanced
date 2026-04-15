@@ -6530,17 +6530,19 @@ public class VectorDemo
     - **Accepts heterogeneous** objects.
     - Based on **LIFO** (**L**ast **I**n, **F**irst **O**ut).
 
+- Different ways to initialize the `Stack()`:
 
-- How **Java** implements the **Stack**:
+````Java
+        // Only way to create stack!
+        Stack stack = new Stack();
 
-<details>
-<summary id="full_code_stack" open="true"> <b>Full code after Stack chapter</b>! </summary>
+        // Adding to stack.
+        stack.push(10);
+        stack.push(30);
+        stack.push(true);
+````
 
-```Java
-
-```
-</details>
-
+- **Elements:** are based in **LIFO** (**L**ast **I**n, **F**irst **O**ut).
 
 <details>
 <summary id="stack_class_from_JDK" open="true"> <b>Stack class from JDK</b>! </summary>
@@ -6692,6 +6694,66 @@ public class Stack<E> extends Vector<E> {
 ```
 </details>
 
+<br>
+
+- We can use multiple different methods for the `Stack`:
+
+````Java
+        // Popping from stack.
+        System.out.println("Popping element:");
+        Object popped = stack.pop(); // Pop get first from stack!
+        System.out.println(stack);
+
+        System.out.println("Peek element:");
+        Object peek = stack.peek(); // Peek, Look at the top element of the stack without removing it!
+        System.out.println(peek);
+        System.out.println("Printing the stack:");
+        System.out.println(stack);
+        System.out.println("Searching in the stack:");
+        System.out.println(stack.search(10)); // Searches where the "2" is.
+        // Two from top!
+````
+
+<details>
+<summary id="full_code_stack" open="true"> <b>Full code after Stack chapter</b>! </summary>
+
+```Java
+package list;
+
+import java.util.Stack;
+
+public class StackDemo
+{
+    public static void main( String[] args )
+    {
+        // Only way to create stack!
+        Stack stack = new Stack();
+
+        // Adding to stack.
+        stack.push(10);
+        stack.push(30);
+        stack.push(true);
+        System.out.println("Printing stack:");
+        System.out.println(stack);
+
+        // Popping from stack.
+        System.out.println("Popping element:");
+        Object popped = stack.pop(); // Pop get first from stack!
+        System.out.println(stack);
+
+        System.out.println("Peek element:");
+        Object peek = stack.peek(); // Peek, Look at the top element of the stack without removing it!
+        System.out.println(peek);
+        System.out.println("Printing the stack:");
+        System.out.println(stack);
+        System.out.println("Searching in the stack:");
+        System.out.println(stack.search(10)); // Searches where the "2" is.
+        // Two from top!
+    }
+}
+```
+</details>
+
 # Cursors.
 
 <div align="center">
@@ -6716,3 +6778,13 @@ public class Stack<E> extends Vector<E> {
 5. `Splititerator`.
 
 # Summary.
+
+<div align="center">
+    <img src="Summary_List.JPG"  alt="Java Collections from basics to Advanced Course!" width="500"/>
+</div>
+
+1. We will go thought summary of lists.
+
+<div align="center">
+    <img src="Summary_Info.JPG"  alt="Java Collections from basics to Advanced Course!" width="400"/>
+</div>
