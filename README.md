@@ -313,17 +313,19 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Section 04](https://github.com/developersCradle/java-advanced/tree/main/Java%20Collections%20from%20basics%20to%20Advanced/Section%2004#section-04-collection-framework) - Collection Framework. ✅
 - [x] [Section 05](https://github.com/developersCradle/java-advanced/tree/main/Java%20Collections%20from%20basics%20to%20Advanced/Section%2005#section-05-collection-and-collections) - Collection and Collections. ✅ 
 - [x] [Section 06](https://github.com/developersCradle/java-advanced/tree/main/Java%20Collections%20from%20basics%20to%20Advanced/Section%2006#section-06-generics-overview) - Generics Overview. ✅
-- [ ] [Section 07](https://github.com/developersCradle/java-advanced/tree/main/Java%20Collections%20from%20basics%20to%20Advanced/Section%2007#section-07-lists-arraylist-linkedlist-vector-and-stack-and-cursors) - Lists ArrayList LinkedList Vector and Stack and Cursors. ⚠️ In progress! ⚠️
-- [ ] [Section 08](#) - Set Its implementation class and more.
-- [ ] [Section 09](#) - Queues.
-- [ ] [Section 10](#) - Maps & Trees in Depth - Working and its implementation classes.
-- [ ] [Section 11](#) - Concurrent Collections in depth.
-- [ ] [Section 12](#) - Lambda and Collections in depth.
+- [x] [Section 07](https://github.com/developersCradle/java-advanced/tree/main/Java%20Collections%20from%20basics%20to%20Advanced/Section%2007#section-07-lists-arraylist-linkedlist-vector-and-stack-and-cursors) - Lists ArrayList LinkedList Vector and Stack and Cursors. ✅
+- [ ] [Section 08](https://github.com/developersCradle/java-advanced/tree/main/Java%20Collections%20from%20basics%20to%20Advanced/Section%2008#section-08-set-its-implementation-class-and-more) - Set Its implementation class and more. ⚠️ In progress! ⚠️
+- [ ] [Section 09](https://github.com/developersCradle/java-advanced/blob/main/Java%20Collections%20from%20basics%20to%20Advanced/Section%2009/README.md#section-09-queues) - Queues.
+- [ ] [Section 10](https://github.com/developersCradle/java-advanced/tree/main/Java%20Collections%20from%20basics%20to%20Advanced/Section%2010#section-10-maps--trees-in-depth---working-and-its-implementation-classes) - Maps & Trees in Depth - Working and its implementation classes. ⚠️ In progress! ⚠️
+- [ ] [Section 11](https://github.com/developersCradle/java-advanced/tree/main/Java%20Collections%20from%20basics%20to%20Advanced/Section%2011#section-11-concurrent-collections-in-depth) - Concurrent Collections in depth.
+- [ ] [Section 12](https://github.com/developersCradle/java-advanced/tree/main/Java%20Collections%20from%20basics%20to%20Advanced/Section%2012#section-12-lambda-and-collections-in-depth) - Lambda and Collections in depth.
 - [ ] [Section 13](#) - Streams in Depth and collections.
 - [ ] [Section 14](#) - Generics In Depth.
-- [ ] [Section 15](#) - Thank you!.
+- [ ] [Section 15](#) - Thank you!
 
 #### Additional stuff.
 
 - [ ] Make illustration in `.gif`.
 - [ ] Make summaries for each ds in the chatper!
+- [ ] Finish the chapter Cursors! .
+

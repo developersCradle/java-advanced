@@ -4945,7 +4945,7 @@ public class LinkedListDemo
 - **Resizing formula:** New capacity = 2 × old capacity (it doubles).
 
 <details>
-<summary id="vector_class_from_JDK" open="true"> <b>Vector class from JDK</b>! </summary>
+<summary id="vector_class_from_Jjdk" open="true"> <b>Vector class from JDK</b>! </summary>
 
 ```Java
 /*
@@ -6545,7 +6545,7 @@ public class VectorDemo
 - **Elements:** are based in **LIFO** (**L**ast **I**n, **F**irst **O**ut).
 
 <details>
-<summary id="stack_class_from_JDK" open="true"> <b>Stack class from JDK</b>! </summary>
+<summary id="stack_class_from_jdk" open="true"> <b>Stack class from JDK</b>! </summary>
 
 ```Java
 /*
