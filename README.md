@@ -328,4 +328,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Make illustration in `.gif`.
 - [ ] Make summaries for each ds in the chatper!
 - [ ] Finish the chapter Cursors! .
+- [ ] If energy, go thought `Map Introduction` go thought the examples, and make notes of them!
+
+- [ ] Check the [Program to interface](https://www.baeldung.com/cs/program-to-interface)
 
