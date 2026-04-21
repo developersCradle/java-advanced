@@ -49,7 +49,7 @@ Maps & Trees in Depth - Working and its implementation classes.
     - If both object are the same, they have same **hash**!
 4. For `obj` the **hash** is **15**, we will be performing **modulo** `%` with the **size** of the **table**!
 5. **Hash table** for data storage!
-6. When there is **two**, same index being created. There is❌Collision❌
+6. When there is **two**, same index being created. There is ❌**collision**❌
     - In this case there will be **Linked List** created, for store both values!
 
 # HashMap – Introduction.
@@ -61,7 +61,7 @@ Maps & Trees in Depth - Working and its implementation classes.
 1. We will be discussing **HashMap**!
 
 <div align="center">
-    <img src="HashMap.JPG"  alt="Java Collections from basics to Advanced Course!" width="500"/>
+    <img src="HashMap.JPG"  alt="Java Collections from basics to Advanced Course!" width="500" id="hashmap_properties"/>
 </div>
 
 1. **HashMap** is implementing the `Map` interface! 
@@ -2683,11 +2683,9 @@ public class HashMap<K,V> extends AbstractMap<K,V>
         }
         return new HashMap<>(calculateHashMapCapacity(numMappings));
     }
-
 }
 ```
 </details>
-
 
 # HashMap – Internal Working.
 
@@ -2697,10 +2695,60 @@ public class HashMap<K,V> extends AbstractMap<K,V>
 
 1. As reminder, we will be using the `HashMap` implementation class, which implements the `Map` interface!
 2. We will be using the **Program to Interface**, we will be using the **super** `Map` interface, not he **HashMap** implementation!  Example below:
-    ````Java
-    Map map = new HashMap();
-    ````
 
+````Java
+        Map map = new HashMap();
+        HashMap mapSecond = new HashMap(20);
+
+        // Load factor and initial capacity!
+        HashMap mapThird= new HashMap(20, 0.9f);
+
+        // We can create HashMap based from other collection!
+        HashMap newMap = new HashMap(map);
+````
+- `Map map = new HashMap();` has default initial capacity of **16**!
+
+- We will be populating and printing the `HashMap`.
+
+````Java
+        // We will be populating this HashMap!
+        HashMap<String, Integer> hashMap = new HashMap();
+        hashMap.put("Science", 90);
+        hashMap.put("Math", 80);
+        hashMap.put("English", 90);
+
+        System.out.println(hashMap);
+````
+
+- Printing the values from `HashMap`.
+
+<div align="center">
+    <img src="HashMap_Popilated_And_Printed.gif"  alt="Java Collections from basics to Advanced Course!" width="600"/>
+</div>
+
+1. You can see those elements are **printed**, and their order is not in **order** like in point `2.1`!
+
+- We will explore the how the **HashMap** looks inside!
+
+<div align="center">
+    <img src="HashMap_Debugging.JPG"  alt="Java Collections from basics to Advanced Course!" width="500"/>
+</div>
+
+1. We can **explore** the `next`. Since there is no other **elements** in this **Node**, it is `null`.
+
+- Next we will be same **hash code**! 
+
+````Java
+        // Same Hashcode!
+        hashMap.put("FB", 10);
+        hashMap.put("Ea", 10);
+````
+
+<div align="center">
+    <img src="HashMap_Debugging_Having_Samle_Hash_Code.JPG"  alt="Java Collections from basics to Advanced Course!" width="500"/>
+</div>
+
+1. Since there **two** same **hash code**, they get stored in the **same bucket** and the `next` get reference to it!
 
 # Difference Between HashMap and HashTable.
 
