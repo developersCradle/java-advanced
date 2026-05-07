@@ -169,11 +169,19 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 </details>
 
+
 <p align="center">
-    <img id="Advanced Java Topics: Java Reflection - Master Class" src="Refactoring into Chain of Responsibility from Legacy Code caption.png" style="height: 130px; width: 900px;">
+    <img
+     src="Refactoring into Chain of Responsibility from Legacy Code caption.png"
+    alt="Refactoring into Chain of Responsibility from Legacy Code Caption"
+    style="width:1600px;height:110px;"/>
 </p>
 
-![Refactoring into Chain of Responsibility from Legacy Code]( Refactoring%20into%20Chain%20of%20Responsibility%20from%20Legacy%20Code%20desc.PNG)
+<p align="center">
+    <img src="Refactoring into Chain of Responsibility from Legacy Code desc.PNG"
+    alt="Refactoring into Chain of Responsibility from Legacy Code Description"
+    style="width:690px" />
+</p>
 
 All course material from *Refactoring into Chain of Responsibility from Legacy Code* by **Włodek Krakowski**
 
@@ -326,9 +334,57 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 #### Additional stuff.
 
 - [ ] Make illustration in `.gif`.
-- [ ] Make summaries for each ds in the chatper!
+- [ ] Make summaries for each ds in the chapter!
 - [ ] Finish the chapter Cursors! .
 - [ ] If energy, go thought `Map Introduction` go thought the examples, and make notes of them!
 
 - [ ] Check the [Program to interface](https://www.baeldung.com/cs/program-to-interface)
 
+# Solving Memory Leaks in the JVM.
+
+<!-- 
+<p align="center">
+    <img
+     src="Java_Collections_From_Basics_To_Advanced_Caption.png"
+    alt=" Java Collections From Basics To Advanced Caption"
+    style="width:1600px;height:110px;"/>
+</p> -->
+
+<p align="center">
+    <img src="Java_Memory_Leak_Description.PNG"
+    alt="Java Memory Leak Description"
+    style="width:690px" />
+</p>
+
+All course material from *Solving Memory Leaks in the JVM* by **Kirk Pepperdine**!
+
+> Add story here <br><br>
+~ *DevelopersCradle*
+
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
+
+<!-- add this comment later 
+This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️ -->
+
+[The series at YouTube](#). 
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+<div align="center">
+    Insert certificate here when completed
+</div>
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+#### Progress/Curriculum.
+
+- [x] [Section 01](#) - . 
+
+#### Additional stuff.
+
+- [ ] Todo.
